@@ -14,7 +14,8 @@ export default function MediaControlCard() {
     return (
         // First Activity Card
         <div className='cards'>
-            <Card sx={{ display: 'flex' }}>
+            <h2 className='activityHeader'>You're in Control. <br /> Choose an Activity.</h2>
+            <Card sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <CardContent sx={{ flex: '1 0 auto' }}>
                         <Typography component="div" variant="h5">
@@ -26,17 +27,17 @@ export default function MediaControlCard() {
                 </Box>
                 <CardMedia
                     component="img"
-                    sx={{ width: 50, height: 50 }}
+                    sx={{ width: 100 }}
                     image={drawIcon}
                     alt="Draw"
                 />
             </Card>
             {/* //Second Activity Card */}
-            <Card sx={{ display: 'flex' }}>
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Card sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                <Box>
                     <CardContent sx={{ flex: '2 1 auto', justifyItems: 'space-between' }}>
                         <Typography component="div" variant="h5">
-                            Draw                    </Typography>
+                            Journal                    </Typography>
                         <Typography variant="subtitle1" color="text.secondary" component="div">
                             5 Minutes
                         </Typography>
@@ -44,7 +45,7 @@ export default function MediaControlCard() {
                 </Box>
                 <CardMedia
                     component="img"
-                    sx={{ width: 50 }}
+                    sx={{ width: 100 }}
                     image={journalIcon}
                     alt="Journal"
                 />

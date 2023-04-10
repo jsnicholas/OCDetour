@@ -1,0 +1,33 @@
+
+body {
+    background-image: url(../assets/images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#root {
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.activitySelect::before {
+    max-height: 5rem;
+    content:url('../assets/images/logo.png');
+    background-color: #FFFFFF;
+}
+.activitySelect {
+    padding:1rem;
+    max-width: fit-content;
+    background: fixed;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.activityHeader {
+    font-family: 'Raleway', sans-serif;
+    color: #000169;
+    text-align: center;
+}
