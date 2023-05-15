@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(../assets/images/background.png);
+    background-image: url(./assets/images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -11,7 +11,7 @@ body {
 
 .activitySelect::before {
     max-height: 5rem;
-    content:url('../assets/images/logo.png');
+    content:url('./assets/images/logo.png');
     background-color: #FFFFFF;
 }
 .activitySelect {
