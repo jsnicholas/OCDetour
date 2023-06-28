@@ -30,16 +30,29 @@ const resolvers = {
         const activity = await User.create(args);
 
         await User.findOneAndUpdate(
-          { __id: context.user.__id },
+          { _id: context.user._id },
           { $addToSet: { savedActivities: args } },
           { new: true, runValidators }
         );
         return activity;
       }
       throw new AuthenticationError('Please log in to perform this action')
+    },
+    deleteActivity: async (parent, args, context) => {
+      if (context.user) {
+        const activity = await User.findOneAndUpdate(
+          { _id: context.user_id },
+          { $pull: { savedActivities: args } },
+          { new: true }
+        );
+        return activity;
+      }
+      throw new AuthenticationError('Please log in to perform this action')
     }
   }
-}
+};
+
+module.exports = resolvers;
 
 
 // const { Tech, Matchup } = require('../models');
@@ -70,4 +83,4 @@ const resolvers = {
 //   },
 // };
 
-module.exports = resolvers;
+// module.exports = resolvers;
