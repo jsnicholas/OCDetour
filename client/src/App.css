@@ -1,7 +1,6 @@
-/* This is the src css. Compiling Tailwind will utilize this file */
-/* Tailwind config defaults*/
+/* tailwind config -- do not change */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* insert any custom CSS below this line */
+/* insert custom css below this line */
