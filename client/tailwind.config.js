@@ -1,9 +1,7 @@
-/* eslint-env node */
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
-  theme: {
-    extend: {},
+module.exports = {
+  daisyui: {
+    themes: ['pastel'],
   },
-  plugins: [require("daisyui")],
-}
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  plugins: [require('daisyui')],
+};
