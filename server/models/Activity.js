@@ -7,7 +7,7 @@ const activitySchema = new Schema(
             required: true
         },
         time: {
-            type: Int16Array,
+            type: Number,
             required: true
         }
     }
