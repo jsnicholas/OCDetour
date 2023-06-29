@@ -1,12 +1,9 @@
 import React from 'react';
-import LoginCard from './components/loginCard';
-import './input.css';
+import LoginPage from './pages/loginPage';
 
 const App = (props) => {
   return (
-    <div>
-      <LoginCard></LoginCard>
-    </div>
+    <LoginPage></LoginPage>
   );
 };
 export default App;
