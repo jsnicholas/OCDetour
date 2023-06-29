@@ -1,16 +1,31 @@
+import SignupCard from "./signupCard";
+
 function LoginCard() {
     return (
-        <div className="card h-96 w-96 bg-base-100 text-neutral-content mx-auto">
-            <div className="card-body items-center text-center">
-                <h2 className="card-title">Welcome!</h2>
-                <p>Please log in.</p>
-                <input type="text" placeholder="Username" className="input input-bordered w-full max-w-xs" />
-                <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" />
-                <div className="card-actions justify-end">
-                    <button className="btn btn-neutral">Log in</button>
+        <>
+
+            <dialog id="my_modal_1" className="modal">
+                <form method="dialog" className="modal-box">
+                    <SignupCard></SignupCard>
+                    <div className="modal-action">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn">Login Instead</button>
+                    </div>
+                </form>
+            </dialog>
+            <div className="card h-96 w-96 bg-base-100 text-neutral-content mx-auto">
+                <div className="card-body items-center text-center">
+                    <h2 className="card-title">Welcome!</h2>
+                    <p>Please log in.</p>
+                    <input type="text" placeholder="Email" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" />
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-neutral">Log in</button>
+                        <button className="btn" onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
