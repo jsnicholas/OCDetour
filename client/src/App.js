@@ -1,11 +1,16 @@
 import React from 'react';
-// import LoginPage from './pages/loginPage';
+import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
+import BreatheIcon from './components/breatheIcon';
 import './input.css';
 
 const App = () => {
   return (
-    <ActivityPage></ActivityPage>
+    <>
+      <BreatheIcon />
+      <LoginPage />
+      {/* <ActivityPage /> */}
+    </>
   );
 };
 export default App;
