@@ -3,7 +3,6 @@ import SignupCard from "./signupCard";
 function LoginCard() {
     return (
         <>
-
             <dialog id="my_modal_1" className="modal">
                 <form method="dialog" className="modal-box">
                     <SignupCard></SignupCard>

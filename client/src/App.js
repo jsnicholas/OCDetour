@@ -1,10 +1,10 @@
 import React from 'react';
-//import LoginPage from './pages/loginPage';
+// import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
+import './input.css';
 
-const App = (props) => {
+const App = () => {
   return (
-    //<LoginPage></LoginPage>
     <ActivityPage></ActivityPage>
   );
 };
