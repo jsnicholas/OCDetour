@@ -4,10 +4,8 @@ import wave1 from '../assets/login/wave1.svg';
 function LoginPage() {
     return (
         <>
-            <div className="bg">
-                <div className="z-40 flex content-center justify-center h-screen items-center">
-                    <LoginCard />
-                </div>
+            <div className="z-40 flex content-center justify-center h-screen items-center">
+                <LoginCard />
             </div>
         </>
     )
