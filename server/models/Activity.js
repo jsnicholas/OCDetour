@@ -1,4 +1,6 @@
 const { Schema } = require('mongoose');
+// const { Time } = require('graphql-scalars')
+
 
 const activitySchema = new Schema(
     {
@@ -7,8 +9,9 @@ const activitySchema = new Schema(
             required: true
         },
         time: {
-            type: Number,
-            required: true
+            type: Date,
+            required: true,
+            default: 1
         }
     }
 );

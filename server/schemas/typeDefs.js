@@ -1,18 +1,22 @@
 const { gql } = require('apollo-server-express');
 
+// const { Time } = require('graphql-scalars')
 
 const typeDefs = gql`
+
+scalar Time,
+
   type User {
     _id: ID!
     email: String!
     password: String
-    savedActivities: [Activities]
+    savedActivities: [Activity]
   }
 
   type Activity {
     _id: ID!
     activityType: String!
-    time: Number!
+    time: Time!
   }
 
   type Query {
@@ -22,37 +26,9 @@ const typeDefs = gql`
   type Mutation {
     createUser(email: String!, password: String): User
     login(email: String!, password: String): User
-    saveActivity(activityType: String!, time: Number!): User
-    deleteActivity(activityType: String!, time: Number!): User
+    saveActivity(activityType: String!, time: Time!): User
+    deleteActivity(activityType: String!, time: Time!): User
   }
 `;
 
 module.exports = typeDefs;
-
-
-// const typeDefs = gql`
-//   type Tech {
-//     _id: ID!
-//     name: String!
-//   }
-
-//   type Matchup {
-//     _id: ID!
-//     tech1: String!
-//     tech2: String!
-//     tech1_votes: Int
-//     tech2_votes: Int
-//   }
-
-//   type Query {
-//     tech: [Tech]
-//     matchups(_id: String): [Matchup]
-//   }
-
-//   type Mutation {
-//     createMatchup(tech1: String!, tech2: String!): Matchup
-//     createVote(_id: String!, techNum: Int!): Matchup
-//   }
-// `;
-
-// module.exports = typeDefs;
