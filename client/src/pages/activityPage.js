@@ -1,10 +1,9 @@
 import ActivityCard from "../components/activityCard";
 
-
 function ActivityPage() {
     return (
         <>
-            <section className="container max-w-full columns-1">
+            <section className="flex flex-col">
                 <ActivityCard
                     activityTitle="Meditation"
                     activityTimer="30 minutes"
@@ -15,24 +14,6 @@ function ActivityPage() {
                     activityTitle="Drawing"
                     activityTimer="10 minutes"
                     activityDescription="Creative Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Take a Walk"
-                    activityTimer="60 minutes"
-                    activityDescription="Exercise Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Take a Walk"
-                    activityTimer="60 minutes"
-                    activityDescription="Exercise Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Take a Walk"
-                    activityTimer="60 minutes"
-                    activityDescription="Exercise Activity"
                     activityImage="https://picsum.photos/200"
                     alt="activity image placeholder" />
                 <ActivityCard
