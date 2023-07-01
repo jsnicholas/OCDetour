@@ -1,7 +1,18 @@
+import { useNavigate } from 'react-router-dom';
+
 import BreatheIcon from "./breatheIcon";
 import SignupCard from "./signupCard";
 
 function LoginCard() {
+    // when login/sign up button is clicked
+    // page transition to activity page
+    const navigate = useNavigate();
+
+    const navigateToActivities = () => {
+      // 👇️ navigate to /contacts
+      navigate('activities');
+    };
+
     return (
         <>
             <dialog id="my_modal_1" className="modal">
@@ -23,11 +34,11 @@ function LoginCard() {
 
                     <h2 className="card-title">Welcome!</h2>
                     <span>Please log in.</span>
-                    <input type="text" placeholder="Email" className="input input-bordered w-full max-w-xs" />
-                    <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" />
+                    <input type="text" placeholder="Email" className="input input-bordered w-full max-w-xs " id="email-login" name="email" />
+                    <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" id="password-login" name="password" />
                     <div className="card-actions justify-end">
-                        <button className="btn btn-neutral">Log in</button>
-                        <button className="btn" onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
+                        <button className="btn btn-neutral login" type="submit" onClick={navigateToActivities}>Log in</button>
+                        <button className="btn " onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
                     </div>
                 </div>
             </div>

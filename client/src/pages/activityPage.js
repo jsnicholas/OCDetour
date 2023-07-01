@@ -2,6 +2,10 @@ import ActivityCard from "../components/activityCard";
 
 
 function ActivityPage() {
+    // when login/sign up button is clicked
+    // page transition to activity page
+
+
     return (
         <>
             <section className="container max-w-full columns-1">
