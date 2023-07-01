@@ -9,6 +9,7 @@
 /* https://codepen.io/alvarotrigo/pen/dyzgOER */
 :root {
   --main-gradient: #F5C5F8;
+  --secondary-gradient: #F3B0F8;
   --background-color: #B5BDFA;
 }
 body {
@@ -16,7 +17,7 @@ width: 100%;
   height: 100%;
   background-repeat:no-repeat;
   background-size: cover;
-  background-image: linear-gradient(-90deg, var(--background-color) 0%, var(--background-color) 25%, var(--background-color) 51%, var(--main-gradient) 100%);
+  background-image: linear-gradient(-135deg, var(--background-color) 0%, var(--background-color) 25%, var(--main-gradient) 51%, var(--secondary-gradient) 100%);
   -webkit-animation: AnimateBG 20s ease infinite;
           animation: AnimateBG 20s ease infinite;
 }
@@ -48,13 +49,11 @@ width: 100%;
 /* breathe icon animation */
 /* https://codepen.io/chris22smith/pen/NWwzYrZ */
 .circles {
-  height: 90vmin;
   position: relative;
-  width: 90vmin;
   
   > div {
     animation: growAndFade 4s infinite ease-in-out alternate;
-    background-color: dodgerblue;
+    background-color: #B5BDFA;
     border-radius: 50%;
     height: 100%;
     opacity: 0;

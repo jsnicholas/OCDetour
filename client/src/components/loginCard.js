@@ -1,3 +1,4 @@
+import BreatheIcon from "./breatheIcon";
 import SignupCard from "./signupCard";
 
 function LoginCard() {
@@ -14,8 +15,14 @@ function LoginCard() {
             </dialog>
             <div className="card h-96 w-96 bg-base-100 text-neutral-content mx-auto">
                 <div className="card-body items-center text-center">
+                    {/* Breathing Icon (small) */}
+                    <BreatheIcon
+                        circleWidth="6rem"
+                        circleHeight="6rem"
+                    />
+
                     <h2 className="card-title">Welcome!</h2>
-                    <p>Please log in.</p>
+                    <span>Please log in.</span>
                     <input type="text" placeholder="Email" className="input input-bordered w-full max-w-xs" />
                     <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" />
                     <div className="card-actions justify-end">
