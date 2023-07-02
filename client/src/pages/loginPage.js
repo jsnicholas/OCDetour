@@ -1,10 +1,10 @@
-import LoginCard from '../components/loginCard';
+import LoginCard from '../components/login-signup/loginCard';
 
 
 function LoginPage() {
     return (
         <>
-            <div className="z-40 flex content-center justify-center h-screen items-center">
+            <div className="flex content-center justify-center h-screen items-center">
                 <LoginCard />
             </div>
         </>

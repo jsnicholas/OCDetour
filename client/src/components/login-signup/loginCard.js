@@ -1,4 +1,4 @@
-import BreatheIcon from "./breatheIcon";
+import BreatheIcon from "../global/breatheIcon";
 import SignupCard from "./signupCard";
 
 function LoginCard() {
@@ -13,7 +13,7 @@ function LoginCard() {
                     </div>
                 </form>
             </dialog>
-            <div className="card h-96 w-96 bg-base-100 text-neutral-content mx-auto">
+            <div className="z-40 card h-96 w-96 bg-base-100 text-neutral-content mx-auto">
                 <div className="card-body items-center text-center">
                     {/* Breathing Icon (small) */}
                     <BreatheIcon
