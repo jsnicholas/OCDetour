@@ -1,6 +1,6 @@
-import waveTop from '../assets/login/waveTop.svg';
-import waveBottom from '../assets/login/waveBottom.svg'
-import holoCircles from '../assets/login/holoCircles.svg'
+import waveTop from '../../assets/login/waveTop.svg';
+import waveBottom from '../../assets/login/waveBottom.svg'
+import holoCircles from '../../assets/login/holoCircles.svg'
 
 function BgDecorations() {
     return (
