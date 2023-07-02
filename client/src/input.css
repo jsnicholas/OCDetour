@@ -91,6 +91,10 @@ body {
   margin: 0;
 }
 
+.drawer {
+  z-index: 6;
+}
+
 /* section.transition {
   position: relative !important;
   animation-duration: 1s;
