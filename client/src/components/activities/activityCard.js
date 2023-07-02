@@ -21,10 +21,10 @@ const ActivityCard = (props) => {
         </form>
       </dialog>
       {/* activity card */}
-      <button className="z-20 max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl my-4 text-left" onClick={() => document.getElementById(activityTitle).showModal()}>
+      <button className="z-20 max-w-md h-48 mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl my-4 text-left" onClick={() => document.getElementById(activityTitle).showModal()}>
         <div className="md:flex">
           <div className="md:shrink-0">
-            <img className="h-48 w-full object-cover md:h-full md:w-48" src={activityImage} alt={alt} />
+            <img className="h-24 w-full object-cover md:h-full md:w-48" src={activityImage} alt={alt} />
           </div>
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{activityTimer} minutes</div>

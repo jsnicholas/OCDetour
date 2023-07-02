@@ -13,8 +13,8 @@
   --background-color: #B5BDFA;
 }
 body {
-  /* height: 100vh;
-width: 100%; */
+  /* height: 100vh; */
+  width: 100%; 
   background-repeat:no-repeat;
   background-size: cover;
   background-image: linear-gradient(-135deg, var(--background-color) 0%, var(--background-color) 25%, var(--main-gradient) 51%, var(--secondary-gradient) 100%);
@@ -91,7 +91,19 @@ body {
   margin: 0;
 }
 
-section.transition {
+.navbar{
+  background-color: var(--background-color) !important;
+}
+
+.drawer {
+  z-index: 6;
+}
+
+.drawer-side {
+  border-radius: 0 5rem 5rem 0 !important;
+}
+
+/* section.transition {
   position: relative !important;
   animation-duration: 1s;
   animation-name: transition;
@@ -110,7 +122,7 @@ section.transition {
   50%  {bottom: -200px;}
   75%  {bottom: -100px}
   100% {bottom: 0px;}
-}
+} */
 
 /* MOBILE Breaking Point */
 

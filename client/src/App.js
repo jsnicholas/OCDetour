@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
 import TimerPage from './components/activities/timer';
+import Navbar from './components/navbar/navbar'
 // import tailwind css file
 import './input.css';
 
@@ -28,6 +29,8 @@ const client = new ApolloClient({
 
 const App = () => {
   return (
+    <>
+    <Navbar/>
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
@@ -38,6 +41,7 @@ const App = () => {
       </BrowserRouter>
       <BgDecorations />
     </ApolloProvider>
+    </>
   );
 };
 export default App;
