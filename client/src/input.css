@@ -86,19 +86,19 @@ width: 100%;
 body {
   align-items: center;
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
   justify-content: center;
   margin: 0;
 }
 
-section.activitiestransition {
+section.transition {
   position: relative !important;
   animation-duration: 5s;
   animation-delay: -2s;
   animation-name: transition;
   animation-timing-function: linear;
   background-color: #ffffff ;
-  border-radius: 50rem/15rem;
+  border-radius: 50rem/10rem;
   padding: 5rem 25rem;
   z-index: 4;
 }
@@ -111,4 +111,12 @@ section.activitiestransition {
   75%  {bottom: -100px;}
   90%  {bottom: 0px;}
   100% {bottom: 0px;}
+}
+
+/* MOBILE Breaking Point */
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
 }

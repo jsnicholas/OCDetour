@@ -8,7 +8,7 @@ function ActivityPage() {
     return (
         <>
             <div className="background">
-            <section className="container max-w-full columns-1 activitiestransition">
+            <section className="container max-w-full columns-1 transition">
                 <ActivityCard
                     activityTitle="Meditation"
                     activityTimer="30 minutes"
