@@ -7,8 +7,8 @@ function ActivityPage() {
 
     return (
         <>
-            
-            <section className="container max-w-full columns-1 activities">
+            <div className="background">
+            <section className="container max-w-full columns-1 activitiestransition">
                 <ActivityCard
                     activityTitle="Meditation"
                     activityTimer="30 minutes"
@@ -46,7 +46,7 @@ function ActivityPage() {
                     activityImage="https://picsum.photos/200"
                     alt="activity image placeholder" />
             </section>
-            <div className="activitiestransition"></div>
+            </div>
         </>
     )
 }
