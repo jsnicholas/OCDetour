@@ -1,33 +1,45 @@
 import ActivityCard from "../components/activities/activityCard";
 
 function ActivityPage() {
-    // page transition to activity page
-    //light color half circle with activity list inside are pulled up from the bottom of the page
 
     return (
         <>
-            <div className="background">
-                <section className="container max-w-full columns-1 transition">
-                    <ActivityCard
-                        activityTitle="Meditation"
-                        activityTimer={30}
-                        activityDescription="Breathing Activity"
-                        activityImage="https://picsum.photos/200"
-                        alt="activity image placeholder" />
-                    <ActivityCard
-                        activityTitle="Drawing"
-                        activityTimer={10}
-                        activityDescription="Creative Activity"
-                        activityImage="https://picsum.photos/200"
-                        alt="activity image placeholder" />
-                    <ActivityCard
-                        activityTitle="Take a Walk"
-                        activityTimer={60}
-                        activityDescription="Exercise Activity"
-                        activityImage="https://picsum.photos/200"
-                        alt="activity image placeholder" />
-                </section>
-            </div >
+            <div className="drawer lg:drawer-open">
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content flex flex-col items-center justify-center">
+                    {/* Page content here */}
+                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+
+                </div>
+                <div className="drawer-side">
+                    <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                    <ul className="menu p-4 w-100 h-full bg-base-200 text-base-content">
+                        {/* Sidebar content here */}
+                        <li><a>
+                            <ActivityCard
+                                activityTitle="Meditation"
+                                activityTimer={30}
+                                activityDescription="Breathing Activity"
+                                activityImage="https://picsum.photos/200"
+                                alt="activity image placeholder" /></a></li>
+                        <li><a>
+                            <ActivityCard
+                                activityTitle="Take a Walk"
+                                activityTimer={60}
+                                activityDescription="Exercise Activity"
+                                activityImage="https://picsum.photos/200"
+                                alt="activity image placeholder" /></a></li>
+                        <li><a>
+                            <ActivityCard
+                                activityTitle="Drawing"
+                                activityTimer={10}
+                                activityDescription="Creative Activity"
+                                activityImage="https://picsum.photos/200"
+                                alt="activity image placeholder" /></a></li>
+                    </ul>
+
+                </div>
+            </div>
         </>
     )
 }
