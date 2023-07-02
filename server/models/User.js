@@ -1,7 +1,9 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt')
 
+// subdocuments
 const activitySchema = require('./Activity');
+const historySchema = require('./History')
 
 const userSchema = new Schema(
     {
@@ -14,12 +16,9 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        savedActivities: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'activitySchema'
-            }
-        ]
+        savedActivities: [activitySchema],
+
+        activityHistory: [historySchema]
     }
 );
 
