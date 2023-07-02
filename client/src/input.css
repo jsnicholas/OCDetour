@@ -90,3 +90,29 @@ body {
   justify-content: center;
   margin: 0;
 }
+
+section.activities {
+  z-index: 1;
+}
+
+div.activitiestransition {
+  animation-duration: 3s;
+  animation-name: transition;
+  background-color: #ffffff;
+  border-radius: 50rem/15rem;
+  padding: 50rem;
+  z-index: -1;
+}
+
+@keyframes transition {
+  0%   {top: -300px;}
+  15%  {top: -300px;}
+  25%  {top: -300px;}
+  35%  {top: -300px;}
+  50%  {top: -300px;}
+  60%  {top: -300px;}
+  75%  {top: -300px;}
+  85%  {top: -300px;}
+  95%  {top: -300px;}
+  100% {top: -300px;}
+}
