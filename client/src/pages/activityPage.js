@@ -17,7 +17,7 @@ function ActivityPage() {
                 </div>
                 <div className="drawer-side h-fit">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-fit h-fit bg-base-200 text-base-content">
+                    <ul className="menu p-4 w-fit max-h-fit bg-base-200 text-base-content">
                         {/* Sidebar content here */}
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <li><a>
