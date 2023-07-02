@@ -93,23 +93,22 @@ body {
 
 section.transition {
   position: relative !important;
-  animation-duration: 5s;
-  animation-delay: -2s;
+  animation-duration: 1s;
   animation-name: transition;
   animation-timing-function: linear;
   background-color: #ffffff ;
   border-radius: 50rem/10rem;
-  padding: 5rem 25rem;
+  padding: 5rem 60rem;
   z-index: 4;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 @keyframes transition {
-  0%   {bottom: -900px;}
-  25%  {bottom: -700px;}
-  50%  {bottom: -500px;}
-  60%  {bottom: -300px;}
-  75%  {bottom: -100px;}
-  90%  {bottom: 0px;}
+  0%   {bottom: -400px;}
+  25%  {bottom: -300px;}
+  50%  {bottom: -200px;}
+  75%  {bottom: -100px}
   100% {bottom: 0px;}
 }
 
