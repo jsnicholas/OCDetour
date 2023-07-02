@@ -10,6 +10,7 @@ import './input.css';
 
 //import apollo libraries
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
+import BgDecorations from './components/backgroundDecorations';
 
 //set graphql route
 const gqlLink = createHttpLink({
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="activities" element={<ActivityPage />} />
         </Routes>
       </BrowserRouter>
+      <BgDecorations />
     </ApolloProvider>
   );
 };
