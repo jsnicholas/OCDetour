@@ -91,6 +91,10 @@ body {
   margin: 0;
 }
 
+.navbar{
+  background-color: var(--background-color) !important;
+}
+
 .drawer {
   z-index: 6;
 }

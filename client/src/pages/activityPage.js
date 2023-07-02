@@ -4,11 +4,7 @@ function ActivityPage() {
 
     return (
         <>
-            <div className="navbar bg-neutral">
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                <a className="btn btn-ghost normal-case text-xl">OCDetour</a>
-            </div>
-            <div className=" h-full drawer lg:drawer-open" >
+            <div className=" h-full drawer lg:drawer-open" id="activities">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
                     {/* Page content here */}
