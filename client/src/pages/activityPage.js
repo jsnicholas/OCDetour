@@ -1,5 +1,4 @@
-import ActivityCard from "../components/activityCard";
-
+import ActivityCard from "../components/activities/activityCard";
 
 function ActivityPage() {
     // page transition to activity page
@@ -8,45 +7,27 @@ function ActivityPage() {
     return (
         <>
             <div className="background">
-            <section className="container max-w-full columns-1 transition">
-                <ActivityCard
-                    activityTitle="Meditation"
-                    activityTimer="30 minutes"
-                    activityDescription="Breathing Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Drawing"
-                    activityTimer="10 minutes"
-                    activityDescription="Creative Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Take a Walk"
-                    activityTimer="60 minutes"
-                    activityDescription="Exercise Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Take a Walk"
-                    activityTimer="60 minutes"
-                    activityDescription="Exercise Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Take a Walk"
-                    activityTimer="60 minutes"
-                    activityDescription="Exercise Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-                <ActivityCard
-                    activityTitle="Take a Walk"
-                    activityTimer="60 minutes"
-                    activityDescription="Exercise Activity"
-                    activityImage="https://picsum.photos/200"
-                    alt="activity image placeholder" />
-            </section>
-            </div>
+                <section className="container max-w-full columns-1 transition">
+                    <ActivityCard
+                        activityTitle="Meditation"
+                        activityTimer={30}
+                        activityDescription="Breathing Activity"
+                        activityImage="https://picsum.photos/200"
+                        alt="activity image placeholder" />
+                    <ActivityCard
+                        activityTitle="Drawing"
+                        activityTimer={10}
+                        activityDescription="Creative Activity"
+                        activityImage="https://picsum.photos/200"
+                        alt="activity image placeholder" />
+                    <ActivityCard
+                        activityTitle="Take a Walk"
+                        activityTimer={60}
+                        activityDescription="Exercise Activity"
+                        activityImage="https://picsum.photos/200"
+                        alt="activity image placeholder" />
+                </section>
+            </div >
         </>
     )
 }

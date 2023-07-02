@@ -1,12 +1,10 @@
-import LoginCard from '../components/loginCard';
-import BgDecorations from '../components/backgroundDecorations';
+import LoginCard from '../components/login-signup/loginCard';
 
 
 function LoginPage() {
     return (
         <>
-            <BgDecorations />
-            <div className="z-40 flex content-center justify-center h-screen items-center">
+            <div className="flex content-center justify-center h-screen items-center">
                 <LoginCard />
             </div>
         </>

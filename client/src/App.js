@@ -5,11 +5,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import pages for routing
 import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
+import TimerPage from './components/activities/timer';
 // import tailwind css file
 import './input.css';
 
 //import apollo libraries
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
+import BgDecorations from './components/global/backgroundDecorations';
 
 //set graphql route
 const gqlLink = createHttpLink({
@@ -31,8 +33,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="activities" element={<ActivityPage />} />
+          <Route path="/timer" element={<TimerPage />} />
         </Routes>
       </BrowserRouter>
+      <BgDecorations />
     </ApolloProvider>
   );
 };
