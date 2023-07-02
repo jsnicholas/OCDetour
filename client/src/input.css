@@ -82,3 +82,40 @@ width: 100%; */
     transform: scale(1);
   }
 }
+
+body {
+  align-items: center;
+  display: flex;
+  /* height: 100vh; */
+  justify-content: center;
+  margin: 0;
+}
+
+section.transition {
+  position: relative !important;
+  animation-duration: 1s;
+  animation-name: transition;
+  animation-timing-function: linear;
+  background-color: #ffffff ;
+  border-radius: 50rem/10rem;
+  padding: 5rem 60rem;
+  z-index: 4;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+@keyframes transition {
+  0%   {bottom: -400px;}
+  25%  {bottom: -300px;}
+  50%  {bottom: -200px;}
+  75%  {bottom: -100px}
+  100% {bottom: 0px;}
+}
+
+/* MOBILE Breaking Point */
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
+}
