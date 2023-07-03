@@ -1,5 +1,6 @@
 import ActivityCard from "../components/activities/activityCard";
 
+
 function ActivityPage() {
 
     return (
