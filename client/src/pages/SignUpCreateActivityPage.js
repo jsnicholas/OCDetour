@@ -1,20 +1,19 @@
 import { useNavigate } from 'react-router-dom';
 
-function CreateActivityPage() {
+function SignUpCreateActivityPage() {
     // when create button is clicked
     // page transition to activity page
     const navigate = useNavigate();
 
     const navigateToActivities = () => {
         // 👇️ navigate to activities list
-        navigate('activities');
+        navigate('/activities');
     };
     return (
         <>
-            <h2 className="card-title">You're in control.</h2>
-            <div classvName="card lg:card-side bg-base-100 shadow-xl z-30 mx-auto my-10 h-96 w-96">
+            <div className="card lg:card-side bg-base-100 shadow-xl z-30 mx-auto my-10 h-96 w-96">
                 <div className="card-body">
-                    <h3 className="card-title">Let's Get Started:</h3>
+                    <h3 className="card-title">You're in control. Let's Get Started:</h3>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Activity Title:</span>
@@ -48,4 +47,4 @@ function CreateActivityPage() {
     )
 }
 
-export default CreateActivityPage;
+export default SignUpCreateActivityPage;

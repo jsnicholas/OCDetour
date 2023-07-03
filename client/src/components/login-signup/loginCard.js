@@ -10,7 +10,7 @@ function LoginCard() {
 
     const navigateToActivities = () => {
       // 👇️ navigate to /contacts
-      navigate('activities');
+      navigate('/activities');
     };
 
     return (

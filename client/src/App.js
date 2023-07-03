@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import pages for routing
 import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
-import CreateActivityPage from './pages/createActivityPage';
+import SignUpCreateActivityPage from './pages/SignUpCreateActivityPage';
 import TimerPage from './components/activities/timer';
 import Navbar from './components/navbar/navbar'
 // import tailwind css file
@@ -36,8 +36,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="activities" element={<ActivityPage />} />
-          <Route path="/signupcreateactivity" element={<CreateActivityPage/>} />
+          <Route path="/activities" element={<ActivityPage />} />
+          <Route path="/signupcreateactivity" element={<SignUpCreateActivityPage/>} />
           <Route path="/timer" element={<TimerPage />} />
         </Routes>
       </BrowserRouter>
