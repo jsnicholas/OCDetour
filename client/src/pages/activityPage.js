@@ -1,10 +1,10 @@
 import ActivityCard from "../components/activities/activityCard";
-
+import CrudActivities from "../components/activities/crudActivities";
 
 function ActivityPage() {
 
     return (
-        <>
+        <section className="flex flex-row z-40">
             <div className=" h-full drawer lg:drawer-open" id="activities">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
@@ -52,7 +52,8 @@ function ActivityPage() {
 
                 </div>
             </div>
-        </>
+            <CrudActivities />
+        </section>
     )
 }
 

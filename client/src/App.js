@@ -31,7 +31,7 @@ const client = new ApolloClient({
 const App = () => {
   return (
     <>
-    <Navbar/>
+    <Navbar className="z-40"/>
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
