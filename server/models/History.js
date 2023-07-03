@@ -1,17 +1,22 @@
 const { Schema } = require('mongoose');
 
-const activitySchema = new Schema(
+const historySchema = new Schema(
     {
         activityType: {
             type: String,
             required: true
         },
-        timeInSeconds: {
+        timeSpent: {
             type: Number,
             required: true,
             default: 1
+        },
+        dateCompleted: {
+            type: Date,
+            required: true,
+            default: Date.now
         }
     }
 );
 
-module.exports = activitySchema;
+module.exports = historySchema;
