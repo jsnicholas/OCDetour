@@ -1,6 +1,6 @@
 function CrudActivities() {
     return (
-        <section className="flex flex-wrap mt-24 mr-24 w-full">
+        <section className="w-full mx-2 md:max-xl:flex flex-wrap mt-24">
             <div className="collapse collapse-arrow bg-base-200 w-full">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
