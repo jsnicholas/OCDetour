@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { useMutation } from "@apollo/client";
+//import React, { useState } from 'react'
+//import { useMutation } from "@apollo/client";
 import { useNavigate } from 'react-router-dom';
 
 //mutation should be from the client/src/utils folder
@@ -16,32 +16,32 @@ function SignUpCreateActivityPage() {
     };
 
     // SIGNUP: logic for new activity to be saved to account
-     const saveActivity = (props) => {
-        //mutation: saveActivity
-        // const [saveActivity] = useMutation(SAVE_ACTIVITY);
+    //  const saveActivity = (props) => {
+    //     //mutation: saveActivity
+    //     // const [saveActivity] = useMutation(SAVE_ACTIVITY);
 
-        //useState
-        const [signupActivity, setSignupActivity] = useState("");
+    //     //useState
+    //     const [signupActivity, setSignupActivity] = useState("");
 
-        const title = document.querySelector("#signuptitle").value().trim()
-        const description = document.querySelector("#signupdescription").value().trim()
-        const timer = document.querySelector("#signuptimer").value().trim()
+    //     const title = document.querySelector("#signuptitle").value().trim()
+    //     const description = document.querySelector("#signupdescription").value().trim()
+    //     const timer = document.querySelector("#signuptimer").value().trim()
 
-        // mutation
+    //     // mutation
 
-     }
+    //  }
 
 
 
 
     return (
         <>
-            <div className="card lg:card-side bg-base-100 shadow-xl z-30 mx-auto my-10 h-96 w-96">
+            <div className="card z-30 my-10 h-fit w-fit md:card-side bg-base-100 shadow-xl mx-auto my-10 h-96 w-96">
                 <div className="card-body">
-                    <h3 className="card-title">You're in control. Let's Get Started:</h3>
+                    <h3 className="card-title">Let's get started:</h3>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Activity Title:</span>
+                            <span className="label-text font-bold">Activity Title:</span>
                         </label>
                         <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptitle"/>
                     </div>
@@ -59,7 +59,7 @@ function SignUpCreateActivityPage() {
                     </select>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
-                            <span className="label-text">Activity Timer:</span>
+                            <span className="label-text font-bold">Activity Timer:</span>
                         </label>
                         <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptimer" />
                     </div>
