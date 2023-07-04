@@ -7,6 +7,12 @@ const resolvers = {
     user: async (parent, { email }) => {
       return User.findOne({ email: email });
     },
+    activities: async (parent, { email }) => {
+      return User.findOne({ email }).populate('savedActivities')
+    },
+    history: async (parent, { email }) => {
+      return User.findOne({ email }).populate('activityHistory')
+    }
   },
   Mutation: {
     createUser: async (parent, { email, password }) => {
@@ -38,12 +44,26 @@ const resolvers = {
       }
       throw new AuthenticationError('Please log in to perform this action')
     },
+    
     deleteActivity: async (parent, args, context) => {
       if (context.user) {
         const activity = await User.findOneAndUpdate(
           { _id: context.user_id },
           { $pull: { savedActivities: args } },
           { new: true }
+        );
+        return activity;
+      }
+      throw new AuthenticationError('Please log in to perform this action')
+    },
+    updateHistory: async (parent, ars, context) => {
+      if (context.user) {
+        const activity = await User.create(args);
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { activityHistory: args } },
+          { new: true, runValidators }
         );
         return activity;
       }
