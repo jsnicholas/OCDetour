@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import pages for routing
 import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
+import SignUpCreateActivityPage from './pages/SignUpCreateActivityPage';
 import TimerPage from './components/activities/timer';
 import Navbar from './components/navbar/navbar'
 // import tailwind css file
@@ -30,12 +31,13 @@ const client = new ApolloClient({
 const App = () => {
   return (
     <>
-    <Navbar/>
+    <Navbar className="z-40"/>
     <ApolloProvider client={client}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="activities" element={<ActivityPage />} />
+          <Route path="/activities" element={<ActivityPage />} />
+          <Route path="/signupcreateactivity" element={<SignUpCreateActivityPage/>} />
           <Route path="/timer" element={<TimerPage />} />
         </Routes>
       </BrowserRouter>
