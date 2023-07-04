@@ -1,7 +1,7 @@
 function CrudActivities() {
     return (
-        <section className="flex flex-wrap justify-center content-center mr-96">
-            <div className="collapse collapse-arrow bg-base-200">
+        <section className="flex flex-wrap mt-24 mr-24 w-full">
+            <div className="collapse collapse-arrow bg-base-200 w-full">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
                     Create a New Activity
@@ -10,7 +10,7 @@ function CrudActivities() {
                     <p>CREATE FORM HERE</p>
                 </div>
             </div>
-            <div className="collapse collapse-arrow bg-base-200">
+            <div className="collapse collapse-arrow bg-base-200 w-full">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title text-xl font-medium">
                     Edit an Existing Activity
@@ -19,7 +19,7 @@ function CrudActivities() {
                     <p>UPDATE FORM HERE</p>
                 </div>
             </div>
-            <div className="collapse collapse-arrow bg-base-200">
+            <div className="collapse collapse-arrow bg-base-200 w-full">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title text-xl font-medium">
                     Remove an Existing Activity
