@@ -15,27 +15,30 @@ const typeDefs = gql`
   }
 
   type activitySchema {
-    _id: ID
-    activityType: String
-    timeInSeconds: Int
+    _id: ID!
+    activityType: String!
+    timeInSeconds: Int!
   }
 
   type historySchema {
-    _id: ID
-    activityType: String
-    timeSpent: Int
-    dateCompleted: Date
+    _id: ID!
+    activityType: String!
+    timeSpent: Int!
+    dateCompleted: Date!
   }
 
   type Query {
-    user: [User]
+    user(email: String): User
+    activities(email: String): [activitySchema]
+    history(email: String): [historySchema]
   }
 
   type Mutation {
     createUser(email: String!, password: String): User
     login(email: String!, password: String): User
-    saveActivity(activityType: String!, timeInSeconds: Int!): User
-    deleteActivity(activityType: String!, timeInSeconds: Int!): User
+    saveActivity(activityType: String!, timeInSeconds: Int!): [activitySchema]
+    deleteActivity(activityType: String!, timeInSeconds: Int!): [activitySchema]
+    updateHistory(activityType: String!, timeSpent: Int!, dateCompleted: Date!): [historySchema]
   }
 `;
 
