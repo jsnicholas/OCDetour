@@ -7,7 +7,7 @@ function BgDecorations() {
         <>
             <img
                 className="holoCircles"
-                style={{ position: 'absolute', top: '0px', left: '0px', opacity: '0.3', height: '100vh' }}
+                style={{ position: 'absolute', top: '0px', left: '0px', opacity: '0.3', height: '100vh', zIndex: '0' }}
                 src={holoCircles}
                 aria-hidden="true"
                 alt=""
@@ -20,7 +20,7 @@ function BgDecorations() {
                 alt=""
             />
             <img
-                style={{ position: 'sticky', bottom: '0px', left: '0px', width: '100vw', opacity: '0.3' }}
+                style={{ position: 'absolute', bottom: '0px', left: '0px', width: '100vw', opacity: '0.3' }}
                 className="waveBottom"
                 src={waveBottom}
                 aria-hidden="true"
