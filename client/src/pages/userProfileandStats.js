@@ -6,10 +6,15 @@ function UserProfile() {
         <>
             <section className="w-full md:w-96 flex flex-col my-6">
                 <figure className="my-6 flex items-center">
-                    <UserInfo />
+                    <UserInfo
+                        userAvatar="https://picsum.photos/200"
+                    />
                 </figure>
-                <span className="text-center my-2">Welcome!</span>
-                <UserStats />
+                <p className="text-xl text-custom-dark raleway-font-bold text-center semi-bold my-2">You're in control.<br /> Choose an activity below.</p>
+                <UserStats
+                    totalActivities="4"
+                    totalFocusTime="30m"
+                />
             </section>
         </>
     )

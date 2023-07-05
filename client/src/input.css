@@ -6,12 +6,24 @@
 /* custom css goes below this line */
 /* NOTE: Please use class names in the elements themselves where possible! */
 
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+.raleway-font-bold{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+.raleway-font-regular{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
 /* background animation */
 /* https://codepen.io/alvarotrigo/pen/dyzgOER */
 :root {
   --main-gradient: #F5C5F8;
   --secondary-gradient: #F3B0F8;
   --background-color: #B5BDFA;
+  --text-custom-dark: #080F6C;
 }
 html {
   height: 100vh;
@@ -24,7 +36,9 @@ html {
   -webkit-animation: AnimateBG 10s ease infinite;
           animation: AnimateBG 10s ease infinite;
 }
-
+.text-custom-dark{
+  color: var(--text-custom-dark);
+}
 @-webkit-keyframes AnimateBG {
   0% {
     background-position: 0% 50%;
@@ -86,13 +100,6 @@ html {
   }
 }
 
-/* body {
-  align-items: center;
-  display: flex;
-    justify-content: center;
-  margin: 0;
-} */
-
 .navbar{
   background-color: var(--background-color) !important;
 }
@@ -105,15 +112,13 @@ html {
   border-radius: 0 5rem 5rem 0 !important;
 } */
 
-/* section.transition {
+/* Sliding container animation */
+section.transition {
   position: relative !important;
   animation-duration: 1s;
   animation-name: transition;
   animation-timing-function: linear;
-  background-color: #ffffff ;
   border-radius: 50rem/10rem;
-  padding: 5rem 60rem;
-  z-index: 4;
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
@@ -124,12 +129,4 @@ html {
   50%  {bottom: -200px;}
   75%  {bottom: -100px}
   100% {bottom: 0px;}
-} */
-
-/* MOBILE Breaking Point */
-
-@media only screen and (max-width: 600px) {
-  body {
-    height: 100vh;
-  }
 }
