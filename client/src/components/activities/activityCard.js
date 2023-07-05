@@ -21,7 +21,7 @@ const ActivityCard = (props) => {
         </form>
       </dialog>
       {/* activity card */}
-      <div className="z-20 h-60 w-full md: w-fit md:h-48 mx-auto bg-white rounded-xl shadow-md overflow-hidden my-4 text-left" onClick={() => document.getElementById(activityTitle).showModal()}>
+      <div className="cursor-pointer h-60 w-full md: w-fit md:h-48 mx-auto bg-white rounded-xl shadow-md overflow-hidden my-4 text-left" onClick={() => document.getElementById(activityTitle).showModal()}>
         <div className="md:flex">
           <div className="md:shrink-0">
             <img className="h-24 w-full object-cover md:h-full md:w-48" src={activityImage} alt={alt} />
