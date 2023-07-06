@@ -1,6 +1,5 @@
 import LoginCard from '../components/login-signup/loginCard';
 
-
 function LoginPage() {
     return (
         <>

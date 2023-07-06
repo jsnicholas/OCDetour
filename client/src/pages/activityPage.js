@@ -7,7 +7,7 @@ function ActivityPage() {
     return (
         <>
             <section className="backdrop-blur-lg bg-white/60 transition rounded-lg">
-                <section className="rounded-md grid grid-cols-1 lg:grid-cols-2  m-auto">
+                <section className="rounded-md grid grid-cols-1  m-auto">
                     {/* disabling the drawer for now to work on desktop view */}
                     {/* <div className="h-full drawer lg:drawer-open" id="activities">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />

@@ -118,7 +118,7 @@ section.transition {
   animation-duration: 1s;
   animation-name: transition;
   animation-timing-function: linear;
-  border-radius: 50rem/10rem;
+  border-radius: 30rem 30rem 0 0;
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
