@@ -27,11 +27,17 @@ const resolvers = {
         throw new AuthenticationError('Cannot locate this user');
       }
 
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+      
       const token = signToken(user);
 
       return { token, user }
     },
-    saveActivity: async (parent, ars, context) => {
+    saveActivity: async (parent, args, context) => {
       if (context.user) {
         const activity = await User.create(args);
 
