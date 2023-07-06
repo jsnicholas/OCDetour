@@ -52,6 +52,7 @@ function SignUpCreateActivityPage() {
                         <option>Exercise</option>
                         <option>Gardening</option>
                         <option>Learning</option>
+                        <option>Meditation</option>
                         <option>Music</option>
                         <option>Nature</option>
                         <option>Reading</option>
