@@ -7,8 +7,8 @@ function SignupCard() {
     const navigate = useNavigate();
 
     const navigateToCreateActivities = () => {
-      // 👇️ navigate to /signupcreateactivity
-      navigate('/signupcreateactivity');
+      // 👇️ navigate to /createactivity
+      navigate('/createactivity');
     };
 
 

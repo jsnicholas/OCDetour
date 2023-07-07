@@ -28,30 +28,22 @@ function ActivityPage() {
                         <ActivityCard
                             activityTitle="Meditation"
                             activityTimer={30}
-                            activityDescription="Breathing"
-                            activityImage="https://picsum.photos/200/200"
-                            alt="activity image placeholder" />
+                            activityDescription="Breathing"/>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
                             activityTitle="Example"
                             activityTimer={30}
-                            activityDescription="Example"
-                            activityImage="https://picsum.photos/200/400"
-                            alt="activity image placeholder" />
+                            activityDescription="Example" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
-                            activityTitle="Take a Walk"
+                            activityTitle="Read Poetry"
                             activityTimer={60}
-                            activityDescription="Exercise"
-                            activityImage="https://picsum.photos/200/500"
-                            alt="activity image placeholder" />
+                            activityDescription="Reading"/>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
-                            activityTitle="Drawing"
+                            activityTitle="Draw the Cat"
                             activityTimer={10}
-                            activityDescription="Creative"
-                            activityImage="https://picsum.photos/200"
-                            alt="activity image placeholder" />
+                            activityDescription="Creative"/>
                     </div>
 
                     {/* </div>
