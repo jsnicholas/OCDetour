@@ -1,5 +1,5 @@
 import ActivityCard from "../components/activities/activityCard";
-import CrudActivities from "../components/activities/crudActivities";
+//import CrudActivities from "../components/activities/crudActivities";
 import UserProfile from "./userProfileandStats";
 
 function ActivityPage() {
@@ -28,28 +28,28 @@ function ActivityPage() {
                         <ActivityCard
                             activityTitle="Meditation"
                             activityTimer={30}
-                            activityDescription="Breathing Activity"
+                            activityDescription="Breathing"
                             activityImage="https://picsum.photos/200/200"
                             alt="activity image placeholder" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
                             activityTitle="Example"
                             activityTimer={30}
-                            activityDescription="Example Activity"
+                            activityDescription="Example"
                             activityImage="https://picsum.photos/200/400"
                             alt="activity image placeholder" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
                             activityTitle="Take a Walk"
                             activityTimer={60}
-                            activityDescription="Exercise Activity"
+                            activityDescription="Exercise"
                             activityImage="https://picsum.photos/200/500"
                             alt="activity image placeholder" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
                             activityTitle="Drawing"
                             activityTimer={10}
-                            activityDescription="Creative Activity"
+                            activityDescription="Creative"
                             activityImage="https://picsum.photos/200"
                             alt="activity image placeholder" />
                     </div>
