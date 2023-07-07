@@ -46,11 +46,13 @@ function SignupCard() {
         }
 
         try {
-            const userData = await addUser({
+            const {data} = await addUser({
                 variables: { ...userFormData }
             });
-            console.log(userData)
-            Auth.login(userData);
+
+            Auth.login(data.createUser.token);
+
+            window.location = "/activities"
         } catch (err) {
             console.error(err);
             setShowAlert(true);
@@ -70,7 +72,7 @@ function SignupCard() {
                 <h2 className="card-title">Welcome!</h2>
                 <p>Sign up below.</p>
                 {/* sign up form input fields */}
-                <form validate={validated} onSubmit={handleFormSubmit}>
+                <form onSubmit={handleFormSubmit}>
                     <input
                         type="text"
                         placeholder="Email"

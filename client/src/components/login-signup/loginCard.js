@@ -30,11 +30,11 @@ const LoginForm = () => {
         }
 
         try {
-            const userData = await loginUser({
+            const {data} = await loginUser({
                 variables: { ...userFormData }
             });
-            console.log(`User data: ${userData}`)
-            Auth.login(userData);
+            Auth.login(data.login.token);
+            window.location = "/activities"
         } catch (error) {
             console.error(error);
             setShowAlert(true);
