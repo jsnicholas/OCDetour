@@ -27,8 +27,13 @@ const typeDefs = gql`
     dateCompleted: Date!
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
-    user(email: String): User
+    user(email: String): [User]
     activities(email: String): [activitySchema]
     history(email: String): [historySchema]
   }
