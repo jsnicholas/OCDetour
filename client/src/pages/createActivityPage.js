@@ -73,4 +73,4 @@ function SignUpCreateActivityPage() {
     )
 }
 
-export default SignUpCreateActivityPage;
+export default createActivityPage;
