@@ -1,3 +1,4 @@
+import React from 'react';
 import TimerPage from "./timer";
 
 // stock images
@@ -99,16 +100,19 @@ const ActivityCard = (props) => {
       </dialog>
       {/* activity card */}
       <div className="cursor-pointer h-60 w-full md: w-fit md:h-48 mx-auto bg-white rounded-xl shadow-md overflow-hidden my-4 text-left" onClick={() => document.getElementById(activityTitle).showModal()}>
+      {list.map((activity, i) => (
         <div className="md:flex">
           <div className="md:shrink-0">
-            <img className="h-24 w-full object-cover md:h-full md:w-48" src={activityImage} alt={alt} />
+            <img className="h-24 w-full object-cover md:h-full md:w-48" src={activity.activityImage} alt={activity.alt} />
           </div>
+          
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{activityTimer} minutes</div>
             <p className="block mt-1 text-lg leading-tight font-medium text-black">{activityTitle}</p>
-            <p className="mt-2 text-slate-500">{activityDescription} Activity</p>
+            <p className="mt-2 text-slate-500">{activity.activityDescription} Activity</p>
           </div>
         </div>
+        ))}
       </div>
     </>)
 }

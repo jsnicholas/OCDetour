@@ -1,11 +1,11 @@
-//import React, { useState } from 'react'
+import React from 'react'
 //import { useMutation } from "@apollo/client";
 import { useNavigate } from 'react-router-dom';
 
 //mutation should be from the client/src/utils folder
 // import saveActivity from '../../../server/schemas/resolvers/saveActivity'
 
-function SignUpCreateActivityPage() {
+function CreateActivityPage() {
     // when create button is clicked
     // page transition to activity page
     const navigate = useNavigate();
@@ -73,4 +73,4 @@ function SignUpCreateActivityPage() {
     )
 }
 
-export default createActivityPage;
+export default CreateActivityPage;

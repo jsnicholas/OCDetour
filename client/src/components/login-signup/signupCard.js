@@ -10,8 +10,8 @@ function SignupCard() {
     const navigate = useNavigate();
 
     const navigateToCreateActivities = () => {
-        // 👇️ navigate to /signupcreateactivity
-        navigate('/signupcreateactivity');
+      // 👇️ navigate to /signupcreateactivity
+      navigate('/signupcreateactivity');
     };
 
     // create user query
