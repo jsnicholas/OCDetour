@@ -33,5 +33,5 @@ class AuthService {
     window.location.reload();
   }
 }
-
+// eslint-disable-next-line
 export default new AuthService();

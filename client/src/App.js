@@ -9,7 +9,7 @@ import SignUpCreateActivityPage from './pages/SignUpCreateActivityPage';
 import TimerPage from './components/activities/timer';
 
 // import global page elements
-import Navbar from './components/navbar/navbar'
+// import Navbar from './components/navbar/navbar'
 import BottomMenu from './components/global/bottomMenu';
 
 
@@ -56,7 +56,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/activities" element={<ActivityPage />} />
-            <Route path="/signupcreateactivity" element={<SignUpCreateActivityPage />} />
+            <Route path="/edit" element={<SignUpCreateActivityPage />} />
             <Route path="/timer" element={<TimerPage />} />
           </Routes>
         </BrowserRouter>

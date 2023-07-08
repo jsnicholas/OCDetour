@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
@@ -7,28 +7,30 @@ import Auth from "../../utils/auth"
 function SignupCard() {
     // when login/sign up button is clicked
     // page transition to CREATE activity page
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const navigateToCreateActivities = () => {
-        // 👇️ navigate to /signupcreateactivity
-        navigate('/signupcreateactivity');
-    };
+    // const navigateToCreateActivities = () => {
+    //     // 👇️ navigate to /signupcreateactivity
+    //     navigate('/signupcreateactivity');
+    // };
 
     // create user query
     const [addUser, { error, userData }] = useMutation(CREATE_USER);
     useEffect(() => {
         if (error) {
-            setShowAlert(true)
+            console.error(error)
+            // setShowAlert(true)
         } else {
-            setShowAlert(false)
+            console.log(userData)
+            // setShowAlert(false)
         }
-    }, [error])
+    })
     // set initial form state
     const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
-    // set state for form validation
-    const [validated] = useState(false);
-    // set state for alert
-    const [showAlert, setShowAlert] = useState(false);
+    // // set state for form validation
+    // const [validated] = useState(false);
+    // // set state for alert
+    // const [showAlert, setShowAlert] = useState(false);
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -46,7 +48,7 @@ function SignupCard() {
         }
 
         try {
-            const {data} = await addUser({
+            const { data } = await addUser({
                 variables: { ...userFormData }
             });
 
@@ -55,7 +57,7 @@ function SignupCard() {
             window.location = "/activities"
         } catch (err) {
             console.error(err);
-            setShowAlert(true);
+            // setShowAlert(true);
         }
 
         setUserFormData({

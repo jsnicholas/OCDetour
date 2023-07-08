@@ -67,8 +67,8 @@ html {
 /* https://codepen.io/chris22smith/pen/NWwzYrZ */
 .circles {
   position: relative;
-  
-  > div {
+}
+.circles div {
     animation: growAndFade 4s infinite ease-in-out alternate;
     background-color: #B5BDFA;
     border-radius: 50%;
@@ -87,7 +87,6 @@ html {
   .circle3 {
     animation-delay: 3s;
   }
-}
 
 @keyframes growAndFade {
   0% {
