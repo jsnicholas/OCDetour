@@ -10,11 +10,10 @@ import NatureImg from '../../assets/activities/nature-qingbao-meng-01_igFr7hd4-u
 import ReadingImg from '../../assets/activities/reading-annelies-geneyn-bhBONc07WsI-unsplash.jpg'
 import WritingImg from '../../assets/activities/writing-sixteen-miles-out-3ZvHsFiZyME-unsplash.jpg'
 
+
 // using switch case to render images conditionally
-const ImageComponent = () => {
-  let activityDescription = ["Breathing", "Creative", "Exercise", "Gardening", "Learning", "Meditation", "Music", "Nature", "Reading", "Writing"]
+const ImageComponent = (activityDescription) => {
   return (
-    <>
       <div className="md:shrink-0">
         {(() => {
           switch (activityDescription) {
@@ -44,7 +43,6 @@ const ImageComponent = () => {
        })
       }
       </div>
-    </>
   )
 }
 
