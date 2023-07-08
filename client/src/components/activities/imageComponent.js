@@ -10,71 +10,42 @@ import NatureImg from '../../assets/activities/nature-qingbao-meng-01_igFr7hd4-u
 import ReadingImg from '../../assets/activities/reading-annelies-geneyn-bhBONc07WsI-unsplash.jpg'
 import WritingImg from '../../assets/activities/writing-sixteen-miles-out-3ZvHsFiZyME-unsplash.jpg'
 
-const list = [
-  { 
-    activityDescription: "Breathing",
-    activityImage: BreatheImg,
-    alt: "pink lotus and lily pads floating on a pond",
-    key: 1,
-  },
-  { 
-    activityDescription: "Creative",
-    activityImage: CreativeImg,
-    alt: "person sits at a table painting oranges with paint tray next to them",
-    key: 2,
-  },
-  { 
-    activityDescription: "Exercise",
-    activityImage: ExerciseImg,
-    alt: "a person walking on a pathway",
-    key: 3,
-  },
-  { 
-    activityDescription: "Gardening",
-    activityImage: GardeningImg,
-    alt: "a green watering can waters plants in a garden",
-    key: 4,
-  },
-  { 
-    activityDescription: "Learning",
-    activityImage: LearningImg,
-    alt: "person holds an apple",
-    key: 5,
-  },
-  { 
-    activityDescription: "Meditation",
-    activityImage: MeditationImg,
-    alt: "a tea light burns in a green ceramic candle holder",
-    key: 6,
-  },
-  { 
-    activityDescription: "Music",
-    activityImage: MusicImg,
-    alt: "a pair of headphones rest against records on a shelf",
-    key: 7,
-  },
-  { 
-    activityDescription: "Nature",
-    activityImage: NatureImg,
-    alt: "bright green rolling mountains",
-    key: 8,
-  },
-  { 
-    activityDescription: "Reading",
-    activityImage: ReadingImg,
-    alt: "open book lays on grass",
-    key: 9,
-  },
-  { 
-    activityDescription: "Writing",
-    activityImage: WritingImg,
-    alt: "notebook and pen on a bed next to a cup of coffee and a blanket",
-    key: 10,
-  },
-]
-
+// using switch case to render images conditionally
 const ImageComponent = () => {
-
+  let activityDescription = ["Breathing", "Creative", "Exercise", "Gardening", "Learning", "Meditation", "Music", "Nature", "Reading", "Writing"]
+  return (
+    <>
+      <div className="md:shrink-0">
+        {(() => {
+          switch (activityDescription) {
+            case 'Breathing':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={BreatheImg} alt="pink lotus and lily pads floating on a pond" />
+            case 'Creative':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={CreativeImg} alt="person sits at a table painting oranges with paint tray next to them" />
+            case 'Exercise':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={ExerciseImg} alt="a person walking on a pathway" />
+            case 'Gardening':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={GardeningImg} alt="a green watering can waters plants in a garde" />
+            case 'Learning':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={LearningImg} alt="person holds an apple" />
+            case 'Meditation':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={MeditationImg} alt="a tea light burns in a green ceramic candle holder" />
+            case 'Music':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={MusicImg} alt="a pair of headphones rest against records on a shelf" />
+            case 'Nature':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={NatureImg} alt="bright green rolling mountains" />
+            case 'Reading':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={ReadingImg} alt="open book lays on grass"/>
+            case 'Writing':
+              return <img className="h-24 w-full object-cover md:h-full md:w-48" src={WritingImg} alt="notebook and pen on a bed next to a cup of coffee and a blanket" />
+            default:
+              return null;
+          }
+       })
+      }
+      </div>
+    </>
+  )
 }
 
 export default ImageComponent;
