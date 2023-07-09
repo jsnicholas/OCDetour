@@ -1,5 +1,5 @@
 import ActivityCard from "../components/activities/activityCard";
-import CrudActivities from "../components/activities/crudActivities";
+//import CrudActivities from "../components/activities/crudActivities";
 import UserProfile from "./userProfileandStats";
 
 function ActivityPage() {
@@ -28,30 +28,22 @@ function ActivityPage() {
                         <ActivityCard
                             activityTitle="Meditation"
                             activityTimer={30}
-                            activityDescription="Breathing Activity"
-                            activityImage="https://picsum.photos/200/200"
-                            alt="activity image placeholder" />
+                            activityDescription="Breathing"/>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
-                            activityTitle="Example"
+                            activityTitle="Check for Weeds"
                             activityTimer={30}
-                            activityDescription="Example Activity"
-                            activityImage="https://picsum.photos/200/400"
-                            alt="activity image placeholder" />
+                            activityDescription="Gardening" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
-                            activityTitle="Take a Walk"
+                            activityTitle="Read Poetry"
                             activityTimer={60}
-                            activityDescription="Exercise Activity"
-                            activityImage="https://picsum.photos/200/500"
-                            alt="activity image placeholder" />
+                            activityDescription="Reading"/>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
-                            activityTitle="Drawing"
+                            activityTitle="Draw the Cat"
                             activityTimer={10}
-                            activityDescription="Creative Activity"
-                            activityImage="https://picsum.photos/200"
-                            alt="activity image placeholder" />
+                            activityDescription="Creative"/>
                     </div>
 
                     {/* </div>

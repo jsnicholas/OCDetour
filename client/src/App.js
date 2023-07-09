@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import pages for routing
 import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
-import SignUpCreateActivityPage from './pages/SignUpCreateActivityPage';
+import CreateActivityPage from './pages/createActivityPage';
 import TimerPage from './components/activities/timer';
 
 // import global page elements
@@ -56,7 +56,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/activities" element={<ActivityPage />} />
-            <Route path="/signupcreateactivity" element={<SignUpCreateActivityPage />} />
+            <Route path="/createactivity" element={<CreateActivityPage />} />
             <Route path="/timer" element={<TimerPage />} />
           </Routes>
         </BrowserRouter>
