@@ -5,15 +5,15 @@ import TimerPage from "./timer";
 // import { ACTIVITIES } from '../../utils/queries';
 
 // stock images
-import BreathingImg from '../../assets/activities/breathe-jay-castor-7AcMUSYRZpU-unsplash.jpg'
+import BreathingImg from '../../assets/activities/breathe-cheng-feng-BP-Q-Z0Ua9Y-unsplash.jpg'
 import CreativeImg from '../../assets/activities/creative-sincerely-media-s3tPywNsLSo-unsplash.jpg'
-import ExerciseImg from '../../assets/activities/exercise-arek-adeoye-ljoCgjs63SM-unsplash.jpg'
+import ExerciseImg from '../../assets/activities/exercise-sunday-ii-sunday-Vkem8Ykg-1Q-unsplash.jpg'
 import GardeningImg from '../../assets/activities/gardening-markus-spiske-sFydXGrt5OA-unsplash.jpg'
-import LearningImg from '../../assets/activities/learning-priscilla-du-preez-CoqJGsFVJtM-unsplash.jpg'
+import LearningImg from '../../assets/activities/learning-diego-ph-fIq0tET6llw-unsplash.jpg'
 import MeditationImg from '../../assets/activities/meditation-hans-vivek-UiMkBvDQSAA-unsplash.jpg'
-import MusicImg from '../../assets/activities/music-blocks-T3mKJXfdims-unsplash.jpg'
-import NatureImg from '../../assets/activities/nature-qingbao-meng-01_igFr7hd4-unsplash.jpg'
-import ReadingImg from '../../assets/activities/reading-annelies-geneyn-bhBONc07WsI-unsplash.jpg'
+import MusicImg from '../../assets/activities/music-taylor-hernandez-JMvgllFBMhk-unsplash.jpg'
+import NatureImg from '../../assets/activities/nature-ivana-cajina-HDd-NQ_AMNQ-unsplash.jpg'
+import ReadingImg from '../../assets/activities/reading-sincerely-media-IKzmglo7JLk-unsplash.jpg'
 import WritingImg from '../../assets/activities/writing-sixteen-miles-out-3ZvHsFiZyME-unsplash.jpg'
 
 
@@ -28,21 +28,21 @@ const ActivityCard = (props) => {
     if (activityDescription === "Breathing") {
       return <img className="h-24 w-full object-cover md:h-full md:w-48" src={BreathingImg} alt="pink lotus and lily pads floating on a pond" />
     } else if (activityDescription === "Creative") {
-      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={CreativeImg} alt="person sits at a table painting oranges with paint tray next to them" />
+      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={CreativeImg} alt="a person sits at a table painting oranges with paint tray next to them" />
     } else if (activityDescription === "Exercise") {
-      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={ExerciseImg} alt="a person walking on a pathway" />
+      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={ExerciseImg} alt="a woman in workout clothes wipes sweat off her neck" />
     } else if (activityDescription === "Gardening") {
       return <img className="h-24 w-full object-cover md:h-full md:w-48" src={GardeningImg} alt="a green watering can waters plants" />
     } else if (activityDescription === "Learning") {
-      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={LearningImg} alt="person holds an apple" />
+      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={LearningImg} alt="a person holds up a lightbulb against a blue and pink sky" />
     } else if (activityDescription === "Meditation") {
       return <img className="h-24 w-full object-cover md:h-full md:w-48" src={MeditationImg} alt="a tea light burns in a green ceramic candle holder" />
     } else if (activityDescription === "Music") {
-      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={MusicImg} alt="a pair of headphones rest against records on a shelf" />
+      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={MusicImg} alt="record plays on a shelf against an off-white background" />
     } else if (activityDescription === "Nature") {
-      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={NatureImg} alt="bright green rolling mountains" />
+      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={NatureImg} alt="green rolling mountains at sunrise" />
     } else if (activityDescription === "Reading") {
-      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={ReadingImg} alt="open book lays open on the grass" />
+      return <img className="h-24 w-full object-cover md:h-full md:w-48" src={ReadingImg} alt="open books layered on top of each other" />
     } else if (activityDescription === "Writing") {
       return <img className="h-24 w-full object-cover md:h-full md:w-48" src={WritingImg} alt="notebook and pen on a bed next to a cup of coffee and a blanket" />
     } else {
