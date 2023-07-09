@@ -1,9 +1,19 @@
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { ACTIVITIES } from '../utils/queries';
+
+
+
 import ActivityCard from "../components/activities/activityCard";
 //import CrudActivities from "../components/activities/crudActivities";
 import UserProfile from "./userProfileandStats";
 
+
+
 function ActivityPage() {
-    //use query or mutation to get all saved activities for the user
+    //use query  to get all saved activities for the user
+    const { loading, data } = useQuery(ACTIVITIES);
+    const activities = data?.activities || [];
 
     return (
         <>
@@ -24,12 +34,20 @@ function ActivityPage() {
                         {/* <CrudActivities /> */}
                     </div>
                     <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content">
+                        {loading ? (
+                            <div>Loading...</div>
+                        ) : (
+                            <ActivityCard
+                            activities={activities} 
+                            />
+                        )}
+
                         {/* Sidebar content here */}
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
                             activityTitle="Meditation"
                             activityTimer={30}
-                            activityDescription="Breathing"/>
+                            activityDescription="Breathing" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
                             activityTitle="Water the Garden"
@@ -40,13 +58,13 @@ function ActivityPage() {
                         <ActivityCard
                             activityTitle="Read Poetry"
                             activityTimer={60}
-                            activityDescription="Reading"/>
+                            activityDescription="Reading" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
 
                             activityTitle="Draw What You See"
                             activityTimer={45}
-                            activityDescription="Creative"/>
+                            activityDescription="Creative" />
                     </div>
 
                     {/* </div></div > */}
