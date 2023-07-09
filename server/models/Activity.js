@@ -10,7 +10,11 @@ const activitySchema = new Schema(
             type: Number,
             required: true,
             default: 1
-        }
+        },
+        activityDescription: {
+            type: String,
+            required: true
+        },
     }
 );
 
