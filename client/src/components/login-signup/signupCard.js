@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-
+import React from 'react';
 
 function SignupCard() {
     // when login/sign up button is clicked
@@ -7,8 +7,8 @@ function SignupCard() {
     const navigate = useNavigate();
 
     const navigateToCreateActivities = () => {
-      // 👇️ navigate to /createactivity
-      navigate('/createactivity');
+        // 👇️ navigate to /createactivity
+        navigate('/createactivity');
     };
 
 
@@ -17,8 +17,8 @@ function SignupCard() {
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Welcome!</h2>
                 <p>Sign up below.</p>
-                <input type="text" placeholder="Email" className="input input-bordered w-full max-w-xs" id="email-signup" name="email"/>
-                <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" id="password-signup" name="password"/>
+                <input type="text" placeholder="Email" className="input input-bordered w-full max-w-xs" id="email-signup" name="email" />
+                <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" id="password-signup" name="password" />
                 <div className="card-actions justify-end">
                     <button className="btn btn-neutral signup" type="submit" onClick={navigateToCreateActivities}>Sign Up</button>
                 </div>

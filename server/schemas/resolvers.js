@@ -5,7 +5,8 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     user: async (parent, { email }) => {
-      return User.findOne({ email: email });
+      const params = email ? { email: email } : {}
+      return User.find(params);
     },
     activities: async (parent, { email }) => {
       return User.findOne({ email }).populate('savedActivities')
@@ -32,7 +33,7 @@ const resolvers = {
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-      
+      console.log(user)
       const token = signToken(user);
 
       return { token, user }
@@ -50,7 +51,7 @@ const resolvers = {
       }
       throw new AuthenticationError('Please log in to perform this action')
     },
-    
+
     deleteActivity: async (parent, args, context) => {
       if (context.user) {
         const activity = await User.findOneAndUpdate(

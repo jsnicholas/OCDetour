@@ -17,21 +17,35 @@ import BottomMenu from './components/global/bottomMenu';
 import './input.css';
 
 //import apollo libraries
+import { setContext } from '@apollo/client/link/context'
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
-import BgDecorations from './components/global/backgroundDecorations';
+
+// import BgDecorations from './components/global/backgroundDecorations';
 
 //set graphql route
 const gqlLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
+});
+
+// JWT token context
+// https://www.apollographql.com/docs/react/api/link/apollo-link-context/
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    }
+  }
 });
 
 // configure apollo
 const client = new ApolloClient({
   // set client to use gql with httplink
-  link: gqlLink,
+  link: authLink.concat(gqlLink),
   cache: new InMemoryCache(),
 });
-
+console.log(gqlLink)
 
 const App = () => {
   return (

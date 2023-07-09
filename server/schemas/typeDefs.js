@@ -27,15 +27,20 @@ const typeDefs = gql`
     dateCompleted: Date!
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Query {
-    user(email: String): User
+    user(email: String): [User]
     activities(email: String): [activitySchema]
     history(email: String): [historySchema]
   }
 
   type Mutation {
-    createUser(email: String!, password: String): User
-    login(email: String!, password: String): User
+    createUser(email: String!, password: String): Auth
+    login(email: String!, password: String): Auth
     saveActivity(activityType: String!, timeInSeconds: Int!): [activitySchema]
     deleteActivity(activityType: String!, timeInSeconds: Int!): [activitySchema]
     updateHistory(activityType: String!, timeSpent: Int!, dateCompleted: Date!): [historySchema]
