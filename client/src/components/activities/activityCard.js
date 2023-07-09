@@ -51,7 +51,7 @@ const ActivityCard = (props) => {
   }
 
   return (
-    <>
+    <section>
       {/* modal for each activity */}
       <dialog id={activityTitle} className="modal">
         <form method="dialog" className="modal-box">
@@ -75,6 +75,7 @@ const ActivityCard = (props) => {
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{activityTimer} minutes</div>
             <p className="block mt-1 text-lg leading-tight font-medium text-black">{activityTitle}</p>
             <p className="mt-2 text-slate-500" >{activityDescription} Activity</p>
+          </div>
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{activityTimer} minutes</div>
             <p className="block mt-1 text-lg leading-tight font-medium text-black">{activityTitle}</p>
@@ -82,7 +83,8 @@ const ActivityCard = (props) => {
           </div>
         </div>
       </div>
-    </>)
+    </section>
+  )
 }
 
 export default ActivityCard;
