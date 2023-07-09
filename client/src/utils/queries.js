@@ -13,6 +13,7 @@ export const ACTIVITIES = gql`
     activities(email: $email) {
         activityType
         timeInSeconds
+        activityDescription
     }
     }   
 `;
@@ -23,6 +24,7 @@ export const HISTORY = gql`
         activityType
         dateCompleted
         timeSpent
+        activityDescription
     }
     }
 `

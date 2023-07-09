@@ -1,6 +1,7 @@
 import React from 'react'
 //import { useMutation } from "@apollo/client";
 import { useNavigate } from 'react-router-dom';
+
 import { SAVE_ACTIVITY } from '../utils/mutations';
 
 //mutation should be from the client/src/utils folder
@@ -45,6 +46,7 @@ function CreateActivityPage() {
                             <span className="label-text font-bold">Activity Title:</span>
                         </label>
                         <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptitle" />
+
                     </div>
                     <select className="select select-primary w-full max-w-xs" id="signupdescription">
                         <option disabled selected>Activity Description:</option>

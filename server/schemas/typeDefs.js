@@ -18,6 +18,7 @@ const typeDefs = gql`
     _id: ID!
     activityType: String!
     timeInSeconds: Int!
+    activityDescription: String!
   }
 
   type historySchema {
