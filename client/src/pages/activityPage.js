@@ -31,8 +31,8 @@ function ActivityPage() {
                             activityDescription="Breathing"/>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
-                            activityTitle="Check for Weeds"
-                            activityTimer={30}
+                            activityTitle="Water the Garden"
+                            activityTimer={15}
                             activityDescription="Gardening" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
@@ -41,13 +41,12 @@ function ActivityPage() {
                             activityDescription="Reading"/>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
-                            activityTitle="Draw the Cat"
-                            activityTimer={10}
+                            activityTitle="Draw What You See"
+                            activityTimer={45}
                             activityDescription="Creative"/>
                     </div>
 
-                    {/* </div>
-            </div > */}
+                    {/* </div></div > */}
                 </section>
             </section>
         </>
