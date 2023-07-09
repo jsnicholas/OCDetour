@@ -33,6 +33,7 @@ function ActivityPage() {
                         <ActivityCard
                             activityTitle="Water the Garden"
                             activityTimer={15}
+
                             activityDescription="Gardening" />
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
@@ -41,6 +42,7 @@ function ActivityPage() {
                             activityDescription="Reading"/>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                         <ActivityCard
+
                             activityTitle="Draw What You See"
                             activityTimer={45}
                             activityDescription="Creative"/>

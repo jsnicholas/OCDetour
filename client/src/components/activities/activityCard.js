@@ -16,7 +16,6 @@ import NatureImg from '../../assets/activities/nature-ivana-cajina-HDd-NQ_AMNQ-u
 import ReadingImg from '../../assets/activities/reading-sincerely-media-IKzmglo7JLk-unsplash.jpg'
 import WritingImg from '../../assets/activities/writing-sixteen-miles-out-3ZvHsFiZyME-unsplash.jpg'
 
-
 // describe which parameters to expect
 // ensure that we are receiving correct data
 const ActivityCard = (props) => {
@@ -69,7 +68,6 @@ const ActivityCard = (props) => {
       {/* activity card */}
       <div className="cursor-pointer h-60 w-full md: w-fit md:h-48 mx-auto bg-white rounded-xl shadow-md overflow-hidden my-4 text-left" onClick={() => document.getElementById(activityTitle).showModal()}>
         <div className="md:flex">
-          {/* using switch case to render images conditionally*/}
           <div className="md:shrink-0" description={activityDescription}>
             {description ()}
           </div>
@@ -77,6 +75,10 @@ const ActivityCard = (props) => {
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{activityTimer} minutes</div>
             <p className="block mt-1 text-lg leading-tight font-medium text-black">{activityTitle}</p>
             <p className="mt-2 text-slate-500" >{activityDescription} Activity</p>
+          <div className="p-8">
+            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{activityTimer} minutes</div>
+            <p className="block mt-1 text-lg leading-tight font-medium text-black">{activityTitle}</p>
+            <p className="mt-2 text-slate-500">{activityDescription} Activity</p>
           </div>
         </div>
       </div>

@@ -10,25 +10,26 @@ function SignupCard() {
     const navigate = useNavigate();
 
     const navigateToCreateActivities = () => {
-      // 👇️ navigate to /signupcreateactivity
-      navigate('/signupcreateactivity');
+        // 👇️ navigate to /createactivity
+        navigate('/createactivity');
     };
-
     // create user query
     const [addUser, { error, userData }] = useMutation(CREATE_USER);
     useEffect(() => {
         if (error) {
-            setShowAlert(true)
+            console.error(error)
+            // setShowAlert(true)
         } else {
-            setShowAlert(false)
+            console.log(userData)
+            // setShowAlert(false)
         }
-    }, [error])
+    })
     // set initial form state
     const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
-    // set state for form validation
-    const [validated] = useState(false);
-    // set state for alert
-    const [showAlert, setShowAlert] = useState(false);
+    // // set state for form validation
+    // const [validated] = useState(false);
+    // // set state for alert
+    // const [showAlert, setShowAlert] = useState(false);
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -46,7 +47,7 @@ function SignupCard() {
         }
 
         try {
-            const {data} = await addUser({
+            const { data } = await addUser({
                 variables: { ...userFormData }
             });
 
@@ -55,7 +56,7 @@ function SignupCard() {
             window.location = "/activities"
         } catch (err) {
             console.error(err);
-            setShowAlert(true);
+            // setShowAlert(true);
         }
 
         setUserFormData({
@@ -64,7 +65,6 @@ function SignupCard() {
             password: '',
         });
     };
-
 
     return (
         <div className="card h-96 w-96 bg-base-100 text-neutral-content mx-auto">
@@ -76,7 +76,7 @@ function SignupCard() {
                     <input
                         type="text"
                         placeholder="Email"
-                        className="input input-bordered w-full max-w-xs"
+                        className="my-2 input input-bordered w-full max-w-xs"
                         id="email-signup"
                         name="email"
                         value={userFormData.email}
@@ -86,7 +86,7 @@ function SignupCard() {
                     <input
                         type="password"
                         placeholder="Password"
-                        className="input input-bordered w-full max-w-xs"
+                        className="my-2 input input-bordered w-full max-w-xs"
                         id="password-signup"
                         name="password"
                         value={userFormData.password}

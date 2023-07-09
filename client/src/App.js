@@ -12,7 +12,6 @@ import TimerPage from './components/activities/timer';
 //import Navbar from './components/navbar/navbar'
 import BottomMenu from './components/global/bottomMenu';
 
-
 // import tailwind css file
 import './input.css';
 
