@@ -63,7 +63,7 @@ const resolvers = {
       }
       throw new AuthenticationError('Please log in to perform this action')
     },
-    updateHistory: async (parent, ars, context) => {
+    updateHistory: async (parent, args, context) => {
       if (context.user) {
         const activity = await User.create(args);
 
