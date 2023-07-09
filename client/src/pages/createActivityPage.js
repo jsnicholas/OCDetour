@@ -1,5 +1,5 @@
-import React from 'react'
-//import { useMutation } from "@apollo/client";
+import React, { useState } from 'react'
+import { useMutation } from "@apollo/client";
 import { useNavigate } from 'react-router-dom';
 
 import { SAVE_ACTIVITY } from '../utils/mutations';
@@ -17,19 +17,28 @@ function CreateActivityPage() {
         navigate('/activities');
     };
 
-    // SIGNUP: logic for new activity to be saved to account
-    const handleSaveActivity = (props) => {
-        //mutation: saveActivity
-        // const [saveActivity] = useMutation(SAVE_ACTIVITY);
+    // useState
+    const [newActivity, setNewActivity] = useState("");
 
-        //useState
-        // const [signupActivity, setSignupActivity] = useState("");
+    // mutation
+    const [saveActivity, { error }] = useMutation(SAVE_ACTIVITY);
 
-        const title = document.querySelector("#signuptitle").value().trim()
-        const description = document.querySelector("#signupdescription").value().trim()
-        const timer = document.querySelector("#signuptimer").value().trim()
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setNewActivity({ ...newActivity, [name]: value });
+    }
 
-        // mutation
+    // CREATE ACTIVITY: logic for new activity to be saved to account
+    const handleSaveActivity = async () => {
+
+
+
+
+
+        // const title = document.querySelector("#createtitle").value().trim()
+        // const description = document.querySelector("#createdescription").value().trim()
+        // const timer = document.querySelector("#createtimer").value().trim()
+
 
     }
 
@@ -38,38 +47,56 @@ function CreateActivityPage() {
 
     return (
         <>
-            <div  id="CreateActivityPage" className="card z-30 my-10 h-fit w-fit md:card-side bg-base-100 shadow-xl mx-auto my-10 h-96 w-96">
+            <div id="CreateActivityPage" className="card z-30 my-10 h-fit w-fit md:card-side bg-base-100 shadow-xl mx-auto my-10 h-96 w-96">
                 <div className="card-body">
                     <h3 className="card-title">Let's get started:</h3>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text font-bold">Activity Title:</span>
-                        </label>
-                        <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptitle" />
+                    <form onSubmit={handleSaveActivity}>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text font-bold">Activity Title:</span>
+                            </label>
+                            <input
+                                type="text"
+                                placeholder="Type here..."
+                                className="input input-bordered w-full max-w-xs"
+                                id="createtitle"
+                                onChange={handleInputChange} />
 
-                    </div>
-                    <select className="select select-primary w-full max-w-xs" id="signupdescription">
-                        <option disabled selected>Activity Description:</option>
-                        <option>Breathing</option>
-                        <option>Creative</option>
-                        <option>Exercise</option>
-                        <option>Gardening</option>
-                        <option>Learning</option>
-                        <option>Meditation</option>
-                        <option>Music</option>
-                        <option>Nature</option>
-                        <option>Reading</option>
-                        <option>Writing</option>
-                    </select>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label">
-                            <span className="label-text font-bold">Activity Timer:</span>
-                        </label>
-                        <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptimer" />
-                    </div>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary" onClick={handleSaveActivity}>Create</button>
-                    </div>
+                        </div>
+                        <select
+                            className="select select-primary w-full max-w-xs"
+                            id="createdescription"
+                            onChange={handleInputChange}>
+                            <option disabled selected>Activity Description:</option>
+                            <option>Breathing</option>
+                            <option>Creative</option>
+                            <option>Exercise</option>
+                            <option>Gardening</option>
+                            <option>Learning</option>
+                            <option>Meditation</option>
+                            <option>Music</option>
+                            <option>Nature</option>
+                            <option>Reading</option>
+                            <option>Writing</option>
+                        </select>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text font-bold">Activity Timer:</span>
+                            </label>
+                            <input 
+                            type="number" 
+                            placeholder="Type here..." 
+                            className="input input-bordered w-full max-w-xs" 
+                            id="createtimer" 
+                            onChange={handleInputChange}/>
+                        </div>
+                        <div className="card-actions justify-end">
+                            <button 
+                            type="submit" 
+                            className="btn btn-primary"
+                            onclick={navigateToActivities}>Create</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </>
