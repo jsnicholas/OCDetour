@@ -3,7 +3,8 @@ import ActivityCard from "../components/activities/activityCard";
 import UserProfile from "./userProfileandStats";
 
 function ActivityPage() {
-
+    //use query or mutation to get all saved activities for the user
+    
     return (
         <>
             <section className="backdrop-blur-lg bg-white/60 transition rounded-lg mb-6">

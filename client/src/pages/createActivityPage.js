@@ -18,31 +18,34 @@ function CreateActivityPage() {
     };
 
     // useState
-    const [newActivity, setNewActivity] = useState("");
+    const [newActivity, setNewActivity] = useState({
+        activityType: "",
+        activityDescription: "",
+        timeInSeconds: "",
+
+    });
 
     // mutation
     const [saveActivity, { error }] = useMutation(SAVE_ACTIVITY);
 
     const handleInputChange = (event) => {
-        const { name, value } = event.target;
+        const {  name, value } = event.target;
         setNewActivity({ ...newActivity, [name]: value });
     }
 
     // CREATE ACTIVITY: logic for new activity to be saved to account
-    const handleSaveActivity = async () => {
+    const handleSaveActivity = async (event) => {
+        event.preventDefault();
 
-
-
-
-
-        // const title = document.querySelector("#createtitle").value().trim()
-        // const description = document.querySelector("#createdescription").value().trim()
-        // const timer = document.querySelector("#createtimer").value().trim()
-
-
+        try {
+            // eslint-disable-next-line no-unused-vars
+            const { data } = await saveActivity({
+                variables: { ...newActivity },
+            });
+        } catch (error) {
+            console.error(error);
+        }
     }
-
-
 
 
     return (
@@ -52,19 +55,19 @@ function CreateActivityPage() {
                     <h3 className="card-title">Let's get started:</h3>
                     <form onSubmit={handleSaveActivity}>
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
+                            <label className="label mb-2">
                                 <span className="label-text font-bold">Activity Title:</span>
                             </label>
                             <input
                                 type="text"
                                 placeholder="Type here..."
-                                className="input input-bordered w-full max-w-xs"
+                                className="input input-bordered w-full max-w-xs mb-2"
                                 id="createtitle"
                                 onChange={handleInputChange} />
 
                         </div>
                         <select
-                            className="select select-primary w-full max-w-xs"
+                            className="select select-primary w-full max-w-xs mb-2 font-bold"
                             id="createdescription"
                             onChange={handleInputChange}>
                             <option disabled selected>Activity Description:</option>
@@ -80,24 +83,26 @@ function CreateActivityPage() {
                             <option>Writing</option>
                         </select>
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
+                            <label className="label  mb-2">
                                 <span className="label-text font-bold">Activity Timer:</span>
                             </label>
-                            <input 
-                            type="number" 
-                            placeholder="Type here..." 
-                            className="input input-bordered w-full max-w-xs" 
-                            id="createtimer" 
-                            onChange={handleInputChange}/>
+                            <input
+                                type="number"
+                                placeholder="Type here..."
+                                className="input input-bordered w-full max-w-xs mb-2"
+                                id="createtimer"
+                                onChange={handleInputChange} />
                         </div>
-                        <div className="card-actions justify-end">
-                            <button 
-                            type="submit" 
-                            className="btn btn-primary"
-                            onclick={navigateToActivities}>Create</button>
+                        <div className="card-actions justify-end mb-2">
+                            <button
+                                type="submit"
+                                className="btn btn-primary mb-2"
+                                onclick={navigateToActivities}>Create</button>
                         </div>
+                        {error && <div className="alert alert-error">Something went wrong...</div>}
                     </form>
                 </div>
+                
             </div>
         </>
     )

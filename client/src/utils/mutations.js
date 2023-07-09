@@ -25,11 +25,12 @@ export const LOGIN = gql`
 `;
 
 export const SAVE_ACTIVITY = gql`
-    mutation saveActivity($activityType: String!, $timeInSeconds: Int!) {
-        saveActivity(activityType: $activityType, timeInSeconds: $timeInSeconds) {
+    mutation saveActivity($activityType: String!, $timeInSeconds: Int!, $activityDescription: String!) {
+        saveActivity(activityType: $activityType, timeInSeconds: $timeInSeconds, activityDescription: $activityDescription) {
         _id
         activityType
         timeInSeconds
+        activityDescription
         }
     }
 `;
