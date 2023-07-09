@@ -47,6 +47,7 @@ const client = new ApolloClient({
 console.log(gqlLink)
 
 const App = () => {
+
   return (
     <>
       {/* <Navbar className="z-40" /> */}
@@ -58,12 +59,14 @@ const App = () => {
             <Route path="/createactivity" element={<CreateActivityPage />} />
             <Route path="/timer" element={<TimerPage />} />
           </Routes>
+          {/* TODO: the bottom menu should be rendered conditionally; only if user is on mobile */}
+          <BottomMenu />
         </BrowserRouter>
         {/* disabling bg decoration for now */}
         {/* <BgDecorations /> */}
       </ApolloProvider>
-      {/* TODO: the bottom menu should be rendered conditionally; only if user is on mobile */}
-      <BottomMenu />
+
+
     </>
   );
 };

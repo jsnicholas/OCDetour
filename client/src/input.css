@@ -120,7 +120,7 @@ section.transition {
   animation-timing-function: linear;
   border-radius: 10rem / 30px;
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
 
 @keyframes transition {

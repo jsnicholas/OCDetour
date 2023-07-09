@@ -98,6 +98,7 @@ function SignupCard() {
                         <button
                             className="btn btn-neutral signup"
                             type="submit"
+                            onClick={navigateToCreateActivities}
                             disabled={!(userFormData.email && userFormData.password)}>
                             Sign Up
                         </button>
