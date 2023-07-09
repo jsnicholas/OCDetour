@@ -50,7 +50,7 @@ function CreateActivityPage() {
 
     return (
         <>
-            <div id="CreateActivityPage" className="card z-30 my-10 h-fit w-fit md:card-side bg-base-100 shadow-xl mx-auto my-10 h-96 w-96">
+            <div id="CreateActivityPage" className="card z-30 my-10 h-fit w-96 md:card-side bg-base-100 shadow-xl mx-auto mt-10 h-96 w-96">
                 <div className="card-body">
                     <h3 className="card-title">Let's get started:</h3>
                     <form onSubmit={handleSaveActivity}>
@@ -66,11 +66,15 @@ function CreateActivityPage() {
                                 onChange={handleInputChange} />
 
                         </div>
+                        <div className="form-control w-full max-w-xs">
+                        <label className="label mb-2">
+                                <span className="label-text font-bold">Activity Description:</span>
+                            </label>
                         <select
                             className="select select-primary w-full max-w-xs mb-2 font-bold"
                             id="createdescription"
                             onChange={handleInputChange}>
-                            <option disabled selected>Activity Description:</option>
+                            <option disabled selected> </option>
                             <option>Breathing</option>
                             <option>Creative</option>
                             <option>Exercise</option>
@@ -82,6 +86,7 @@ function CreateActivityPage() {
                             <option>Reading</option>
                             <option>Writing</option>
                         </select>
+                        </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label  mb-2">
                                 <span className="label-text font-bold">Activity Timer:</span>
@@ -97,7 +102,7 @@ function CreateActivityPage() {
                             <button
                                 type="submit"
                                 className="btn btn-primary mb-2"
-                                onclick={navigateToActivities}>Create</button>
+                                onClick={navigateToActivities}>Create</button>
                         </div>
                         {error && <div className="alert alert-error">Something went wrong...</div>}
                     </form>
