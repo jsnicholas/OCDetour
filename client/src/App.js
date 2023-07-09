@@ -9,7 +9,7 @@ import CreateActivityPage from './pages/createActivityPage';
 import TimerPage from './components/activities/timer';
 
 // import global page elements
-import Navbar from './components/navbar/navbar'
+//import Navbar from './components/navbar/navbar'
 import BottomMenu from './components/global/bottomMenu';
 
 
