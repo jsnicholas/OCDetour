@@ -6,7 +6,7 @@ function ActivityPage() {
 
     return (
         <>
-            <section className="backdrop-blur-lg bg-white/60 transition rounded-lg">
+            <section className="backdrop-blur-lg bg-white/60 transition rounded-lg mb-6">
                 <section className="rounded-md grid grid-cols-1  m-auto">
                     {/* disabling the drawer for now to work on desktop view */}
                     {/* <div className="h-full drawer lg:drawer-open" id="activities">
