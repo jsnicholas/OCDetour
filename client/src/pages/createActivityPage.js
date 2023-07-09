@@ -38,7 +38,7 @@ function CreateActivityPage() {
 
     return (
         <>
-            <div className="card z-30 my-10 h-fit w-fit md:card-side bg-base-100 shadow-xl mx-auto my-10 h-96 w-96">
+            <div  id="CreateActivityPage" className="card z-30 my-10 h-fit w-fit md:card-side bg-base-100 shadow-xl mx-auto my-10 h-96 w-96">
                 <div className="card-body">
                     <h3 className="card-title">Let's get started:</h3>
                     <div className="form-control w-full max-w-xs">
