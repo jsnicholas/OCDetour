@@ -1,6 +1,7 @@
 import React from 'react'
 //import { useMutation } from "@apollo/client";
 import { useNavigate } from 'react-router-dom';
+import { SAVE_ACTIVITY } from '../utils/mutations';
 
 //mutation should be from the client/src/utils folder
 // import saveActivity from '../../../server/schemas/resolvers/saveActivity'
@@ -16,20 +17,20 @@ function CreateActivityPage() {
     };
 
     // SIGNUP: logic for new activity to be saved to account
-    //  const saveActivity = (props) => {
-    //     //mutation: saveActivity
-    //     // const [saveActivity] = useMutation(SAVE_ACTIVITY);
+    const handleSaveActivity = (props) => {
+        //mutation: saveActivity
+        // const [saveActivity] = useMutation(SAVE_ACTIVITY);
 
-    //     //useState
-    //     const [signupActivity, setSignupActivity] = useState("");
+        //useState
+        // const [signupActivity, setSignupActivity] = useState("");
 
-    //     const title = document.querySelector("#signuptitle").value().trim()
-    //     const description = document.querySelector("#signupdescription").value().trim()
-    //     const timer = document.querySelector("#signuptimer").value().trim()
+        const title = document.querySelector("#signuptitle").value().trim()
+        const description = document.querySelector("#signupdescription").value().trim()
+        const timer = document.querySelector("#signuptimer").value().trim()
 
-    //     // mutation
+        // mutation
 
-    //  }
+    }
 
 
 
@@ -43,7 +44,7 @@ function CreateActivityPage() {
                         <label className="label">
                             <span className="label-text font-bold">Activity Title:</span>
                         </label>
-                        <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptitle"/>
+                        <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptitle" />
                     </div>
                     <select className="select select-primary w-full max-w-xs" id="signupdescription">
                         <option disabled selected>Activity Description:</option>
@@ -65,7 +66,7 @@ function CreateActivityPage() {
                         <input type="text" placeholder="Type here..." className="input input-bordered w-full max-w-xs" id="signuptimer" />
                     </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary" onClick={navigateToActivities}>Create</button>
+                        <button className="btn btn-primary" onClick={handleSaveActivity}>Create</button>
                     </div>
                 </div>
             </div>

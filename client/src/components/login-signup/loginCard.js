@@ -1,15 +1,23 @@
 import BreatheIcon from "../global/breatheIcon";
 import SignupCard from "./signupCard";
-import { useFormAction, useNavigate } from "react-router-dom";
+// import { useFormAction, useNavigate } from "react-router-dom";
 import Auth from "../../utils/auth"
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
+// import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+    //navigation handling
+    // const navigate = useNavigate();
+    // const navigateToHome = () => {
+    //     // 👇️ navigate to /signupcreateactivity
+    //     navigate('/activities');
+    // };
+
     const [userFormData, setUserFormData] = useState({ email: '', password: '' });
-    const [validated] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
+    // const [validated] = useState(false);
+    // const [showAlert, setShowAlert] = useState(false);
     // use login functions for graphQL
     const [loginUser] = useMutation(LOGIN);
 
@@ -30,14 +38,15 @@ const LoginForm = () => {
         }
 
         try {
-            const {data} = await loginUser({
+            const { data } = await loginUser({
                 variables: { ...userFormData }
             });
             Auth.login(data.login.token);
+            // use navigate function here?
             window.location = "/activities"
         } catch (error) {
             console.error(error);
-            setShowAlert(true);
+            // setShowAlert(true);
         }
 
         setUserFormData({
@@ -45,14 +54,6 @@ const LoginForm = () => {
             email: '',
             password: '',
         });
-    };
-    // when login/sign up button is clicked
-    // page transition to activity page
-    const navigate = useNavigate();
-
-    const navigateToActivities = () => {
-        // 👇️ navigate to /contacts
-        navigate('/activities');
     };
 
     return (
@@ -100,7 +101,7 @@ const LoginForm = () => {
                             {/* Login button */}
                             <button
                                 onClick={handleFormSubmit}
-                                className="btn btn neutral"
+                                className="btn btn-neutral"
                                 disabled={!(userFormData.email && userFormData.password)}
                                 type='submit'
                                 variant='success'>
