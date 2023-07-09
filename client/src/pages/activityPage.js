@@ -4,10 +4,10 @@ import UserProfile from "./userProfileandStats";
 
 function ActivityPage() {
     //use query or mutation to get all saved activities for the user
-    
+
     return (
         <>
-            <section className="backdrop-blur-lg bg-white/60 transition rounded-lg mb-6">
+            <section className="backdrop-blur-lg bg-white/60 transition rounded-lg ">
                 <section className="rounded-md grid grid-cols-1  m-auto">
                     {/* disabling the drawer for now to work on desktop view */}
                     {/* <div className="h-full drawer lg:drawer-open" id="activities">
