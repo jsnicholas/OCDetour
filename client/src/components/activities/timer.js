@@ -1,5 +1,5 @@
 import BreatheIcon from "../global/breatheIcon";
-import React, { useRef, useState, useMemo, useEffect } from "react";
+import React, { useRef } from "react";
 
 // import timer libraries
 // read the documentation here: https://www.npmjs.com/package/react-countdown

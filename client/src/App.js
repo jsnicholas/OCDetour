@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
 import CreateActivityPage from './pages/createActivityPage';
-import TimerPage from './components/activities/timer';
 
 // import global page elements
 //import Navbar from './components/navbar/navbar'
@@ -44,23 +43,29 @@ const client = new ApolloClient({
   link: authLink.concat(gqlLink),
   cache: new InMemoryCache(),
 });
-console.log(gqlLink)
+
+function renderWithBottomMenu(Component) {
+  return (
+    <>
+      <Component /><BottomMenu />
+    </>
+  )
+}
 
 const App = () => {
 
   return (
     <>
-      {/* <Navbar className="z-40" /> */}
       <ApolloProvider client={client}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/activities" element={<ActivityPage />} />
-            <Route path="/createactivity" element={<CreateActivityPage />} />
-            <Route path="/timer" element={<TimerPage />} />
+            <Route path="/" element={<LoginPage />} page="login" />
+            <Route path="/activities" element={renderWithBottomMenu(ActivityPage)} />
+            <Route path="/createactivity" element={renderWithBottomMenu(CreateActivityPage)} />
+            <Route path="*" element={renderWithBottomMenu(ActivityPage)} />
           </Routes>
           {/* TODO: the bottom menu should be rendered conditionally; only if user is on mobile */}
-          <BottomMenu />
+          {/* <BottomMenu /> */}
         </BrowserRouter>
         {/* disabling bg decoration for now */}
         {/* <BgDecorations /> */}
