@@ -33,12 +33,12 @@ function ActivityPage() {
                         <UserProfile />
                         {/* <CrudActivities /> */}
                     </div>
-                    <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content">
+                    <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content mb-10">
                         {loading ? (
                             <div>Loading...</div>
                         ) : (
                             <ActivityCard
-                            activities={activities} 
+                                activities={activities}
                             />
                         )}
 
