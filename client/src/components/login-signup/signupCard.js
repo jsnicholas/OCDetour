@@ -14,18 +14,18 @@ function SignupCard() {
         navigate('/createactivity');
     };
     // create user query
-    const [addUser, { error, userData }] = useMutation(CREATE_USER);
+    const [addUser, { error, data }] = useMutation(CREATE_USER);
     useEffect(() => {
         if (error) {
             console.error(error)
             // setShowAlert(true)
         } else {
-            console.log(userData)
+            console.log(data)
             // setShowAlert(false)
         }
     })
     // set initial form state
-    const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
+    const [userFormData, setUserFormData] = useState({email: '', password: '' });
     // // set state for form validation
     // const [validated] = useState(false);
     // // set state for alert
@@ -52,7 +52,7 @@ function SignupCard() {
             });
 
             Auth.login(data.createUser.token);
-
+            
             window.location = "/activities"
         } catch (err) {
             console.error(err);
@@ -60,7 +60,6 @@ function SignupCard() {
         }
 
         setUserFormData({
-            username: '',
             email: '',
             password: '',
         });
@@ -97,8 +96,8 @@ function SignupCard() {
                     <div className="card-actions justify-end">
                         <button
                             className="btn btn-neutral signup"
-                            type="submit"
-                            onClick={navigateToCreateActivities}
+                            type="button"
+                            onClick={handleFormSubmit}
                             disabled={!(userFormData.email && userFormData.password)}>
                             Sign Up
                         </button>
