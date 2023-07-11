@@ -39,17 +39,14 @@ const resolvers = {
       return { token, user }
     },
     saveActivity: async (parent, args, context) => {
-      console.log(args)
-      console.log(context)
+      console.log(`User context ${JSON.stringify(context.user)}`)
       if (context.user) {
-        const activity = await User.create(args);
-
-        await User.findOneAndUpdate(
+        const returnedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { savedActivities: args } },
-          { new: true, runValidators }
+          { new: true, runValidators: false }
         );
-        return activity;
+        return returnedUser.savedActivities;
       }
       throw new AuthenticationError('Please log in to perform this action')
     },

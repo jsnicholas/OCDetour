@@ -15,7 +15,7 @@ module.exports = {
     }
 
     if (!token) {
-      // return res.status(400).json({ message: 'You have no token!' });
+      return res.status(400).json({ message: 'You have no token!' });
       return req;
     }
 
@@ -33,8 +33,8 @@ module.exports = {
     // next();
     return req;
   },
-  signToken: function ({ token, email, _id }) {
-    const payload = { token, email, _id };
+  signToken: function ({ email, _id }) {
+    const payload = { email, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
