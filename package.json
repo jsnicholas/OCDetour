@@ -4,7 +4,11 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "server": "cd server && nodemon server.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm install && npm run install-client && npm run build",
+    "server": "cd server && server.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
   },
   "author": "",
@@ -13,7 +17,6 @@
     "concurrently": "^5.3.0"
   },
   "dependencies": {
-    "graphql-scalars": "^1.22.2",
-    "concurrently": "^5.3.0"
+    "graphql-scalars": "^1.22.2"
   }
 }

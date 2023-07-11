@@ -4,6 +4,7 @@
   "proxy": "http://localhost:3001/",
   "private": true,
   "dependencies": {
+    "tailwindcss": "^3.3.2",
     "daisyui": "^3.0.3",
     "@apollo/client": "^3.7.16",
     "@testing-library/jest-dom": "^5.16.5",
