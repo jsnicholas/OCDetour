@@ -5,14 +5,7 @@ import { CREATE_USER } from '../../utils/mutations';
 import Auth from "../../utils/auth"
 
 function SignupCard() {
-    // when login/sign up button is clicked
-    // page transition to CREATE activity page
-    const navigate = useNavigate();
 
-    const navigateToCreateActivities = () => {
-        // 👇️ navigate to /createactivity
-        navigate('/createactivity');
-    };
     // create user query
     const [addUser, { error, data }] = useMutation(CREATE_USER);
     useEffect(() => {
