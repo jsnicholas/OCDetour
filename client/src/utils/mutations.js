@@ -13,24 +13,19 @@ export const CREATE_USER = gql`
 `;
 
 export const LOGIN = gql`
-    mutation login($email: String!, $password: String) {
+    mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
         token
         user {
             _id
             email
-            savedActivities{
-                activityType
-                timeInSeconds
-                activityDescription
-            }
         }
     }
     }
 `;
 
 export const SAVE_ACTIVITY = gql`
-    mutation saveActivity($activityType: String!, $timeInSeconds: Int!, $activityDescription: String!) {
+    mutation saveActivity($activityType: String!, $timeInSeconds: String!, $activityDescription: String!) {
         saveActivity(activityType: $activityType, timeInSeconds: $timeInSeconds, activityDescription: $activityDescription) {
         _id
         activityType

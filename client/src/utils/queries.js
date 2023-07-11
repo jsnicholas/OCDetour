@@ -33,3 +33,17 @@ export const HISTORY = gql`
     }
     }
 `
+
+export const ME = gql`
+query me {
+me {
+_id
+savedActivities{
+activityType
+timeInSeconds
+activityDescription
+}
+}
+}
+
+`

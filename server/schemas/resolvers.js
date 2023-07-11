@@ -14,6 +14,9 @@ const resolvers = {
     },
     history: async (parent, { email }) => {
       return User.findOne({ email }).populate('activityHistory')
+    },
+    me: async (parent, args, context) => {
+      return await User.findById(context.user._id)
     }
   },
   Mutation: {
@@ -45,7 +48,7 @@ const resolvers = {
         const returnedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { savedActivities: args } },
-          { new: true, runValidators: false }
+          { new: true, runValidators: true }
         );
         return returnedUser.savedActivities;
       }

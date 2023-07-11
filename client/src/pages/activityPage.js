@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
-import { USER } from '../utils/queries';
+import { ME } from '../utils/queries';
+import { useNavigate } from 'react-router-dom';
 
 import ActivityCard from "../components/activities/activityCard";
 import UserProfile from "./userProfileandStats";
 
+
 function ActivityPage() {
+    // const navigate = useNavigate();
+    // const refreshPage = () => {
+    //     navigate(0)
+    // }
+    // refreshPage()
     //use query  to get all saved activities for the user
-    const { loading, data } = useQuery(USER);
+    const { loading, data } = useQuery(ME);
     console.log(`User data: ${JSON.stringify(data)}`);
 
-
-    const activitiesData = data?.user || [];
+    // check if the user has data, if so display it
+    const activitiesData = data?.me || [];
     //query mongo user.findone()
     //by email
 
@@ -29,6 +36,7 @@ function ActivityPage() {
                         <UserProfile />
                     </div>
                     <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content mb-10">
+                        {console.log(activitiesData)}
                         {activitiesData?.savedActivities?.map((activity, i) => {
                             return (
                                 <ActivityCard
