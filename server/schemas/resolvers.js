@@ -39,6 +39,8 @@ const resolvers = {
       return { token, user }
     },
     saveActivity: async (parent, args, context) => {
+      console.log(args)
+      console.log(context)
       if (context.user) {
         const activity = await User.create(args);
 
@@ -61,7 +63,7 @@ const resolvers = {
         );
         return activity;
       }
-      throw new AuthenticationError('Please log in to perform this action')
+      throw new AuthenticationError('Please log in to perform this action',)
     },
     updateHistory: async (parent, args, context) => {
       if (context.user) {

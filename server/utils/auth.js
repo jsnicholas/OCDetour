@@ -1,38 +1,40 @@
 const jwt = require('jsonwebtoken');
 
-// FIGURE OUT WHERE/HOW TO HIDE SECRET !!! !!! !!!
-const secret = 'mysecretssshhhhhhh';
+// set token secret and expiration date
+const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
 module.exports = {
+  // function for our authenticated routes
   authMiddleware: function ({ req }) {
-    let token = req.body.token || req.query.token || req.headers.authorization;
-
+    // allows token to be sent via  req.query or headers
+    let token = req.headers.authorization;
+    // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
 
     if (!token) {
+      // return res.status(400).json({ message: 'You have no token!' });
       return req;
     }
 
+    // verify token and get user data out of it
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      console.log(`Here is the data: ${JSON.stringify(data)}`)
       req.user = data;
     } catch {
       console.log('Invalid token');
+      // return res.status(400).json({ message: 'invalid token!' });
     }
 
+    // send to next endpoint
+    // next();
     return req;
   },
-  signToken: function ({ email, name, _id }) {
-    const payload = { email, name, _id };
+  signToken: function ({ token, email, _id }) {
+    const payload = { token, email, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
-
-// To be used on schema/resolvers for addProfile and login mutations 
-// If username and password are valid on login
-// const token = signToken(profile)
-// return { token, profile}
-// if just addprofile, remove const token line
