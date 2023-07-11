@@ -9,7 +9,7 @@
     "heroku-postbuild": "npm install && npm run install-client && npm run build",
     "server": "cd server && server.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+    "start": "npm run server"
   },
   "author": "",
   "license": "ISC",
