@@ -8,18 +8,18 @@ import UserProfile from "./userProfileandStats";
 function ActivityPage() {
     //use query  to get all saved activities for the user
     const { loading, data } = useQuery(USER);
-    console.log(data);
+    console.log(`User data: ${JSON.stringify(data)}`);
 
     // const findUser = user.findOne()
 
-    //const activitiesData = data?.user[0] || [];
+    const activitiesData = data || [];
     //query mongo user.findone()
     //by email
 
-      // if data isn't here yet, say so
-  if (loading) {
-    return <h2>LOADING...</h2>;
-  }
+    // if data isn't here yet, say so
+    if (loading) {
+        return <h2>LOADING...</h2>;
+    }
 
     return (
         <>
@@ -33,9 +33,9 @@ function ActivityPage() {
                         {activitiesData?.savedActivities?.map((activity, i) => {
                             return (
                                 <ActivityCard
-                                activityTitle={activity.activityType}
-                                activityTimer={activity.timeInSeconds}
-                                activityDescription={activity.activityDescription} 
+                                    activityTitle={activity.activityType}
+                                    activityTimer={activity.timeInSeconds}
+                                    activityDescription={activity.activityDescription}
                                 />
                             )
                         })}
@@ -49,7 +49,7 @@ function ActivityPage() {
 
                         {/* Sidebar content here */}
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                       {/*<ActivityCard
+                        {/*<ActivityCard
                             activityTitle="Meditation"
                             activityTimer={30}
                             activityDescription="Breathing" />}

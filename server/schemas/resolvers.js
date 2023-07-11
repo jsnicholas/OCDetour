@@ -5,8 +5,9 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     user: async (parent, { email }) => {
-      const params = email ? { email: email } : {}
-      return User.find(params);
+      console.log(`this is the email: ${email}`)
+      // const params = email ? { email: email } : {}
+      return User.findOne({ email });
     },
     activities: async (parent, { email }) => {
       return User.findOne({ email }).populate('savedActivities')
