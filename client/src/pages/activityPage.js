@@ -9,7 +9,12 @@ function ActivityPage() {
     //use query  to get all saved activities for the user
     const { loading, data } = useQuery(USER);
     console.log(data);
-    const activitiesData = data?.user[0] || [];
+
+    // const findUser = user.findOne()
+
+    //const activitiesData = data?.user[0] || [];
+    //query mongo user.findone()
+    //by email
 
       // if data isn't here yet, say so
   if (loading) {
