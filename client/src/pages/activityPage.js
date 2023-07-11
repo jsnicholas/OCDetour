@@ -10,9 +10,8 @@ function ActivityPage() {
     const { loading, data } = useQuery(USER);
     console.log(`User data: ${JSON.stringify(data)}`);
 
-    // const findUser = user.findOne()
 
-    const activitiesData = data || [];
+    const activitiesData = data?.user || [];
     //query mongo user.findone()
     //by email
 
@@ -33,46 +32,14 @@ function ActivityPage() {
                         {activitiesData?.savedActivities?.map((activity, i) => {
                             return (
                                 <ActivityCard
+                                    key={i}
                                     activityTitle={activity.activityType}
                                     activityTimer={activity.timeInSeconds}
                                     activityDescription={activity.activityDescription}
                                 />
                             )
                         })}
-                        {/*loading ? (
-                            <div>Loading...</div>
-                        ) : (
-                            <ActivityCard
-                                activities={activities}
-                            />
-                        )*/}
-
-                        {/* Sidebar content here */}
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                        {/*<ActivityCard
-                            activityTitle="Meditation"
-                            activityTimer={30}
-                            activityDescription="Breathing" />}
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                        {/*<ActivityCard
-                            activityTitle="Water the Garden"
-                            activityTimer={15}
-
-                            activityDescription="Gardening" />
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                        {/*<ActivityCard
-                            activityTitle="Read Poetry"
-                            activityTimer={60}
-                            activityDescription="Reading" />
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                        {/*<ActivityCard
-
-                            activityTitle="Draw What You See"
-                            activityTimer={45}
-                            activityDescription="Creative" />*/}
                     </div>
-
-                    {/* </div></div > */}
                 </section>
             </section>
         </>

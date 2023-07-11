@@ -6,8 +6,8 @@ const resolvers = {
   Query: {
     user: async (parent, { email }) => {
       console.log(`this is the email: ${email}`)
-      // const params = email ? { email: email } : {}
-      return User.findOne({ email });
+      const params = email ? { email: email } : {}
+      return User.find(params);
     },
     activities: async (parent, { email }) => {
       return User.findOne({ email }).populate('savedActivities')
