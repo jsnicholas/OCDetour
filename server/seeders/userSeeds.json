@@ -1,10 +1,54 @@
 [
     {
         "email": "test@test.com",
-        "password": "password"
+        "password": "password",
+        "savedActivities": [
+        { 
+            "activityType": "Read Poetry",
+            "timeInSeconds": "10",
+            "activityDescription": "Reading"
+        }, 
+        {
+            "activityType": "Journal",
+            "timeInSeconds": "15",
+            "activityDescription": "Writing"
+        },
+        { 
+            "activityType": "Meditate",
+            "timeInSeconds": "5",
+            "activityDescription": "Meditation"
+        }, 
+        { 
+            "activityType": "Walk",
+            "timeInSeconds": "30",
+            "activityDescription": "Exercise"
+        }
+    ]
     },
     {
         "email": "user@user.com",
-        "password": "password"
+        "password": "password",
+        "savedActivities": [
+            { 
+                "activityType": "Read Poetry",
+                "timeInSeconds": "10",
+                "activityDescription": "Reading"
+            }, 
+            {
+                "activityType": "Journal",
+                "timeInSeconds": "15",
+                "activityDescription": "Writing"
+            },
+            { 
+                "activityType": "Meditate",
+                "timeInSeconds": "5",
+                "activityDescription": "Meditation"
+            }, 
+            { 
+                "activityType": "Walk",
+                "timeInSeconds": "30",
+                "activityDescription": "Exercise"
+            }
+        ]
     }
 ]
