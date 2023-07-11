@@ -4,6 +4,11 @@ export const USER = gql`
     query user($email: String) {
     user(email: $email) {
         email
+        savedActivities {
+            activityDescription
+            activityType
+            timeInSeconds
+        }
     }
     }
 `;
