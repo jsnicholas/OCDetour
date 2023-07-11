@@ -9,7 +9,6 @@ const typeDefs = gql`
   type User {
     _id: ID!
     email: String!
-    password: String
     savedActivities: [activitySchema]!
     activityHistory: [historySchema]!
   }
@@ -37,12 +36,13 @@ const typeDefs = gql`
     user(email: String): [User]
     activities(email: String): [activitySchema]
     history(email: String): [historySchema]
+    me: User
   }
 
   type Mutation {
     createUser(email: String!, password: String!): Auth,
     login(email: String!, password: String!): Auth,
-    saveActivity(activityType: String!,activityDescription: String!, timeInSeconds: Int!): [activitySchema],
+    saveActivity(activityType: String!,activityDescription: String!, timeInSeconds: String!): [activitySchema],
     deleteActivity(activityType: String!, timeInSeconds: Int!): [activitySchema]
     updateHistory(activityType: String!, timeSpent: Int!, dateCompleted: Date!): [historySchema]
   }

@@ -38,7 +38,7 @@ const LoginForm = () => {
         }
 
         try {
-            console.log("Attempting to get user data...")
+            console.log("Attempting to get user data..." + JSON.stringify(userFormData))
             const { data } = await loginUser({
                 variables: { ...userFormData }
             });
@@ -46,7 +46,7 @@ const LoginForm = () => {
             // use navigate function here?
             window.location = "/activities"
         } catch (error) {
-            console.error("There was an error signing in");
+            console.error(error);
             // setShowAlert(true);
         }
 
@@ -104,12 +104,14 @@ const LoginForm = () => {
                                 onClick={handleFormSubmit}
                                 className="btn btn-neutral"
                                 disabled={!(userFormData.email && userFormData.password)}
-                                type='submit'
+                                type='button'
                                 variant='success'>
                                 Login
                             </button>
                             {/* sign up button */}
-                            <button className="btn" onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
+                            <button
+                                className="btn"
+                                onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
                             {error && <div className="alert alert-error">Something went wrong...</div>}
                         </div>
                     </form>

@@ -44,6 +44,9 @@ function CreateActivityPage() {
             const { data } = await saveActivity({
                 variables: { ...newActivity },
             });
+            if (data) {
+                navigateToActivities()
+            }
         } catch (error) {
             console.error(error);
         }
@@ -98,6 +101,7 @@ function CreateActivityPage() {
                             <input
                                 name="timeInSeconds"
                                 type="number"
+                                min={1}
                                 placeholder="Type here..."
                                 className="input input-bordered w-full max-w-xs mb-2"
                                 id="createtimer"
