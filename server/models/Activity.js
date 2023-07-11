@@ -7,7 +7,7 @@ const activitySchema = new Schema(
             required: true
         },
         timeInSeconds: {
-            type: Number,
+            type: String,
             required: true,
             default: 1
         },
