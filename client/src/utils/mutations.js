@@ -19,13 +19,18 @@ export const LOGIN = gql`
         user {
             _id
             email
+            savedActivities{
+                activityType
+                timeInSeconds
+                activityDescription
+            }
         }
     }
     }
 `;
 
 export const SAVE_ACTIVITY = gql`
-    mutation saveActivity($activityType: String!, $timeInSeconds: String, $activityDescription: String!) {
+    mutation saveActivity($activityType: String!, $timeInSeconds: Int!, $activityDescription: String!) {
         saveActivity(activityType: $activityType, timeInSeconds: $timeInSeconds, activityDescription: $activityDescription) {
         _id
         activityType

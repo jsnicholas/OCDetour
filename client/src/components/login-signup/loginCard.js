@@ -19,7 +19,7 @@ const LoginForm = () => {
     // const [validated] = useState(false);
     // const [showAlert, setShowAlert] = useState(false);
     // use login functions for graphQL
-    const [loginUser] = useMutation(LOGIN);
+    const [loginUser, { error }] = useMutation(LOGIN);
 
 
     const handleInputChange = (event) => {
@@ -29,7 +29,7 @@ const LoginForm = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-
+        console.log("Attempting to sign in...")
         // check if form has everything (as per react-bootstrap docs)
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -38,6 +38,7 @@ const LoginForm = () => {
         }
 
         try {
+            console.log("Attempting to get user data...")
             const { data } = await loginUser({
                 variables: { ...userFormData }
             });
@@ -45,7 +46,7 @@ const LoginForm = () => {
             // use navigate function here?
             window.location = "/activities"
         } catch (error) {
-            console.error(error);
+            console.error("There was an error signing in");
             // setShowAlert(true);
         }
 
@@ -109,7 +110,7 @@ const LoginForm = () => {
                             </button>
                             {/* sign up button */}
                             <button className="btn" onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
-
+                            {error && <div className="alert alert-error">Something went wrong...</div>}
                         </div>
                     </form>
                 </div>

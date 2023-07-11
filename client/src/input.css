@@ -67,8 +67,8 @@ html {
 /* https://codepen.io/chris22smith/pen/NWwzYrZ */
 .circles {
   position: relative;
-  
-  > div {
+}
+.circles > .circle1, .circle2, .circle3{
     animation: growAndFade 4s infinite ease-in-out alternate;
     background-color: #B5BDFA;
     border-radius: 50%;
@@ -78,16 +78,16 @@ html {
     width: 100%;
   }
   
-  .circle1 {
-    animation-delay: 1s;    
+ .circle1 {
+    animation-delay: 1s;   
   }
-  .circle2 {
+ .circle2 {
     animation-delay: 2s; 
   }
   .circle3 {
     animation-delay: 3s;
   }
-}
+
 
 @keyframes growAndFade {
   0% {
@@ -103,14 +103,6 @@ html {
 .navbar{
   background-color: var(--background-color) !important;
 }
-
-/* .drawer {
-  z-index: 6;
-} */
-
-/* .drawer-side {
-  border-radius: 0 5rem 5rem 0 !important;
-} */
 
 /* Sliding container animation */
 section.transition {
