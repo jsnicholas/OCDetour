@@ -6,7 +6,19 @@
 
 OCDetour is an app to help delay compulsions for people with OCD. Leveraging [research published in the journal of Behavioral Analysis](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6758933/), OCDetour utilizes the concept of delay discounting. By delaying a compulsion, the _perceived reward value_ of completing the compulsion decreases. With OCDetour, the user can select from a list of Detours -- activities that encourage the user to do something else for a set amount of time -- and delay compulsions.
 
-## Screenshots
+This application uses the following technologies:
+
+React Library
+**Mongoose** for data housing.
+**Apollo/GraphQL** for remote data management.
+**JWT** for authentication and security.
+**Tailwind CSS with DaisyUI** for design.
+
+## Table of Contents
+
+## Links
+
+## Preview
 
 ## Installation & Dependencies
 
@@ -15,16 +27,20 @@ Run client and server with `npm run develop`
 
 ## Development Team
 
-**Tina Croxton**  
+**Tina Croxton**
+*Database Administrator, API Developer* 
 [GitHub Profile](https://github.com/TinaTheDev91)
 
 **Victoria McNorrill**  
+*UI/UX Designer, Front-End Developer*
 [Github Profile](https://github.com/victoriamcn)
 
 **John Kersey**  
+*Authentication Engineer*
 [Github Profile](https://github.com/JohnKersey2)
 
-**Nick Johnson**  
+**Nick Johnson**
+*UI/UX Designer, Front-End Developer*
 [Github Profile](https://github.com/jsnicholas)
 
 ## License
@@ -34,6 +50,19 @@ This project is licensed under MIT.
 
 - [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation or,
 - Go to the [license file](https://github.com/jsnicholas/LaborHub/blob/main/LICENSE) with in this repository.
+
+## Node Dependencies
+
+Click links to read the documentation for each dependency:
+
+- [@apollo/client](https://www.npmjs.com/package/@apollo/client)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [express](https://www.npmjs.com/package/express)
+- [graphql](https://www.npmjs.com/package/graphql)
+- [GraphQL-scalars](https://www.npmjs.com/package/graphql-scalars)
+- [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [mongoose](https://www.npmjs.com/package/mongoose)
+- [react](https://www.npmjs.com/package/react)
 
 ## Disclaimer
 
