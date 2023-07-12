@@ -16,31 +16,80 @@ React Library
 
 ## Table of Contents
 
+- [OCDetour](#ocdetour)
+    - [Description](#description)
+- [Table of Contents](#table-of-contents)
+    - [Links](#links)
+    - [Preview](#preview)
+        -[Login Page](#login-page)
+        -[Create Activity Page](#create-activity-page)
+        -[Activity Page](#activity-page)
+    - [Installation & Dependencies](#installation--dependencies)
+    - [Development Team](#development-team)
+        -[Tina Croxton](#tina-croxton)
+        -[Victoria McNorrill](#victoria-mcnorrill)
+        -[John Kersey](#john-kersey)
+        -[Nick Johnson](#nick-johnson)
+    - [License](#license)
+    - [Node Dependencies](#node-dependencies)
+    - [Disclaimer](#disclaimer)
+    - [Resources Used](#resources-used)
+    - [Badges](#badges)
+        - [Cloud Service](#cloud-service)
+        - [Database](#database)
+        - [Frameworks and Libraries](#frameworks-and-libraries)
+        - [Integrated Development Environments (IDE)](#untegrated-development-environments-ide)
+        - [Languages](#languages)
+        - [Linter](#linter)
+
 ## Links
+
+[Deployed Application]()
 
 ## Preview
 
+### Login Page
+
+![OCDetour Login Page](./assets/loginpreview.png)
+
+### Create Activity Page
+
+![OCDetour Create Activity Page](./assets/createactivitypreview.png)
+
+### Activity Page
+
+![OCDetour Activity Page](./assets/activitypreview.png)
+
 ## Installation & Dependencies
 
-Install with `npm i`
-Run client and server with `npm run develop`
+1. Install with `npm run install`.
+2. Seed the server with `cd server`, `npm run seed`, then `cd ..`
+3. Run client and server with `npm run develop`.
 
 ## Development Team
 
-**Tina Croxton**
+# Tina Croxton
+
 *Database Administrator, API Developer* 
+
 [GitHub Profile](https://github.com/TinaTheDev91)
 
-**Victoria McNorrill**  
+# Victoria McNorrill
+
 *UI/UX Designer, Front-End Developer*
+
 [Github Profile](https://github.com/victoriamcn)
 
-**John Kersey**  
+# John Kersey
+
 *Authentication Engineer*
+
 [Github Profile](https://github.com/JohnKersey2)
 
-**Nick Johnson**
+# Nick Johnson
+
 *UI/UX Designer, Front-End Developer*
+
 [Github Profile](https://github.com/jsnicholas)
 
 ## License
@@ -48,8 +97,7 @@ Run client and server with `npm run develop`
 [MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 This project is licensed under MIT.
 
-- [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation or,
-- Go to the [license file](https://github.com/jsnicholas/LaborHub/blob/main/LICENSE) with in this repository.
+- [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation.
 
 ## Node Dependencies
 
@@ -71,3 +119,37 @@ OCDetour is an app designed to provide support and information for individuals d
 ### Resources Used
 
 FontAwesome icons
+
+## Badges
+
+### Cloud Service
+
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+
+### Database
+
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
+### Frameworks and Libraries
+
+![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+
+### Integrated Development Environments (IDE)
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+### Languages
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
+### Linter
+![ESLINT](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
