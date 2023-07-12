@@ -16,14 +16,43 @@ React Library
 
 ## Table of Contents
 
+- [OCDetour](#ocdetour)
+    - [Description](#description)
+- [Table of Contents](#table-of-contents)
+    - [Links](#links)
+    - [Preview](#preview)
+        -[Login Page](#login-page)
+        -[Create Activity Page](#create-activity-page)
+        -[Activity Page](#activity-page)
+    - [Installation & Dependencies](#installation--dependencies)
+    - [Development Team](#development-team)
+    - [License](#license)
+    - [Node Dependencies](#node-dependencies)
+    - [Disclaimer](#disclaimer)
+    - [Resources Used](#resources-used)
+
 ## Links
+
+[Deployed Application]()
 
 ## Preview
 
+### Login Page
+
+![OCDetour Login Page](./assets/loginpreview.png)
+
+### Create Activity Page
+
+![OCDetour Create Activity Page](./assets/createactivitypreview.png)
+
+### Activity Page
+
+![OCDetour Activity Page](./assets/activitypreview.png)
+
 ## Installation & Dependencies
 
-Install with `npm i`
-Run client and server with `npm run develop`
+1. Install with `npm i`.
+2. Run client and server with `npm run develop`.
 
 ## Development Team
 
