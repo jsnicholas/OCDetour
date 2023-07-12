@@ -5,15 +5,14 @@ import Auth from "../../utils/auth"
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../utils/mutations';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
-    //navigation handling
-    // const navigate = useNavigate();
-    // const navigateToHome = () => {
-    //     // 👇️ navigate to /signupcreateactivity
-    //     navigate('/activities');
-    // };
+    // navigation handling
+    const navigate = useNavigate();
+    const navigateToHome = () => {
+        navigate('/activities');
+    };
 
     const [userFormData, setUserFormData] = useState({ email: '', password: '' });
     // const [validated] = useState(false);
@@ -43,18 +42,13 @@ const LoginForm = () => {
                 variables: { ...userFormData }
             });
             Auth.login(data.login.token);
+
             // use navigate function here?
-            window.location = "/activities"
+            navigateToHome();
         } catch (error) {
             console.error(error);
             // setShowAlert(true);
         }
-
-        setUserFormData({
-            username: '',
-            email: '',
-            password: '',
-        });
     };
 
     return (
