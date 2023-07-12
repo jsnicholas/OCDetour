@@ -24,6 +24,7 @@ React Library
         -[Login Page](#login-page)
         -[Create Activity Page](#create-activity-page)
         -[Activity Page](#activity-page)
+        -[Site Map](#site-map)
     - [Installation & Dependencies](#installation--dependencies)
     - [Development Team](#development-team)
         -[Tina Croxton](#tina-croxton)
@@ -34,6 +35,7 @@ React Library
     - [Node Dependencies](#node-dependencies)
     - [Disclaimer](#disclaimer)
     - [Resources Used](#resources-used)
+        - [Create React App](#create-react-app)
     - [Badges](#badges)
         - [Cloud Service](#cloud-service)
         - [Database](#database)
@@ -41,6 +43,8 @@ React Library
         - [Integrated Development Environments (IDE)](#untegrated-development-environments-ide)
         - [Languages](#languages)
         - [Linter](#linter)
+        - [Team Communication](#team-communication)
+        - [Version Control](#version-control)
 
 ## Links
 
@@ -50,15 +54,21 @@ React Library
 
 ### Login Page
 
-![OCDetour Login Page](./assets/loginpreview.png)
+![OCDetour Login Page](./gitAssets/preview/loginpreview.png)
 
 ### Create Activity Page
 
-![OCDetour Create Activity Page](./assets/createactivitypreview.png)
+![OCDetour Create Activity Page](./gitAssets/preview/createactivitypreview.png)
 
 ### Activity Page
 
-![OCDetour Activity Page](./assets/activitypreview.png)
+![OCDetour Activity Page](./gitAssets/preview/activitypreview.png)
+
+### Site Map
+
+![image of the user flow for the OCDetour App](./gitAssets/preview/userflow.png)
+
+*Made with [Milanote](https://www.milanote.com/refer/rcEpkqyVyNt7y3JS1C).*
 
 ## Installation & Dependencies
 
@@ -68,25 +78,25 @@ React Library
 
 ## Development Team
 
-# Tina Croxton
+### Tina Croxton
 
 *Database Administrator, API Developer* 
 
 [GitHub Profile](https://github.com/TinaTheDev91)
 
-# Victoria McNorrill
+### Victoria McNorrill
 
 *UI/UX Designer, Front-End Developer*
 
 [Github Profile](https://github.com/victoriamcn)
 
-# John Kersey
+### John Kersey
 
 *Authentication Engineer*
 
 [Github Profile](https://github.com/JohnKersey2)
 
-# Nick Johnson
+### Nick Johnson
 
 *UI/UX Designer, Front-End Developer*
 
@@ -116,7 +126,11 @@ Click links to read the documentation for each dependency:
 
 OCDetour is an app designed to provide support and information for individuals dealing with obsessive-compulsive disorder (OCD). However, it is important to note that OCDetour is not intended to replace professional medical advice, diagnosis, or treatment. The content provided in this app is for informational purposes only and should not be considered a substitute for professional medical guidance.
 
-### Resources Used
+## Resources Used
+
+### Create React App
+
+You can learn more about React in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 FontAwesome icons
 
@@ -133,12 +147,14 @@ FontAwesome icons
 ### Frameworks and Libraries
 
 ![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
+![DaisyUI](https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 
 ### Integrated Development Environments (IDE)
@@ -147,9 +163,21 @@ FontAwesome icons
 
 ### Languages
 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ### Linter
+
 ![ESLINT](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
+
+### Team Communication
+
+![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)
+![Zoom](https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white)
+
+### Version Control
+
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
