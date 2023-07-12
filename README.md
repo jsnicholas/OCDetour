@@ -78,25 +78,25 @@ React Library
 
 ## Development Team
 
-# Tina Croxton
+### Tina Croxton
 
 *Database Administrator, API Developer* 
 
 [GitHub Profile](https://github.com/TinaTheDev91)
 
-# Victoria McNorrill
+### Victoria McNorrill
 
 *UI/UX Designer, Front-End Developer*
 
 [Github Profile](https://github.com/victoriamcn)
 
-# John Kersey
+### John Kersey
 
 *Authentication Engineer*
 
 [Github Profile](https://github.com/JohnKersey2)
 
-# Nick Johnson
+### Nick Johnson
 
 *UI/UX Designer, Front-End Developer*
 
