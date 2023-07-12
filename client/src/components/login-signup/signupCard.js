@@ -1,11 +1,10 @@
-import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
 import Auth from "../../utils/auth"
 
 function SignupCard() {
-    const navigate = useNavigate();
+
     // create user query
     const [addUser, { error, data }] = useMutation(CREATE_USER);
     useEffect(() => {
@@ -46,7 +45,7 @@ function SignupCard() {
 
             Auth.login(data.createUser.token);
 
-            navigate('/index.html');
+            window.location = "/index.html"
         } catch (err) {
             console.error(err);
             // setShowAlert(true);
