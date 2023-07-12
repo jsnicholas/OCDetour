@@ -14,13 +14,12 @@ function ActivityPage() {
     // refreshPage()
     //use query  to get all saved activities for the user
     const { loading, data } = useQuery(ME);
-    // console.log(`User data: ${JSON.stringify(data)}`);
-    if (!data) {
-        window.location = "/"
-    }
+    console.log(`User data: ${JSON.stringify(data)}`);
     // check if the user has data, if so display it
     const activitiesData = data?.me || [];
-
+    if (!activitiesData) {
+        window.location = "/"
+    }
     // if data isn't here yet, say so
     if (loading) {
         return <h2>LOADING...</h2>;
