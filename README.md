@@ -124,7 +124,7 @@ Click links to read the documentation for each dependency:
 
 ## Disclaimer
 
-OCDetour is an app designed to provide support and information for individuals dealing with obsessive-compulsive disorder (OCD). However, it is important to note that OCDetour is not intended to replace professional medical advice, diagnosis, or treatment. The content provided in this app is for informational purposes only and should not be considered a substitute for professional medical guidance.
+OCDetour is an app designed to provide support and information for individuals dealing with obsessive-compulsive disorder (OCD). However, OCDetour is not intended to replace professional medical advice, diagnosis, or treatment. The content provided in this app is for informational purposes only and should not be considered a substitute for professional medical guidance.
 
 ## Resources Used
 

@@ -10,10 +10,6 @@ import { LOGIN } from '../../utils/mutations';
 const LoginForm = () => {
     //navigation handling
     // const navigate = useNavigate();
-    // const navigateToHome = () => {
-    //     // 👇️ navigate to /signupcreateactivity
-    //     navigate('/activities');
-    // };
 
     const [userFormData, setUserFormData] = useState({ email: '', password: '' });
     // const [validated] = useState(false);
@@ -44,7 +40,7 @@ const LoginForm = () => {
             });
             Auth.login(data.login.token);
             // use navigate function here?
-            window.location = "/activities"
+            window.location = "/index.html"
         } catch (error) {
             console.error(error);
             // setShowAlert(true);
@@ -78,6 +74,7 @@ const LoginForm = () => {
 
                     <h2 className="card-title">Welcome!</h2>
                     <span>Please log in.</span>
+                    {error && <div className="alert alert-error">Error logging in.</div>}
                     <form onSubmit={handleFormSubmit}>
                         {/* Email input */}
                         <input
@@ -112,7 +109,7 @@ const LoginForm = () => {
                             <button
                                 className="btn"
                                 onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
-                            {error && <div className="alert alert-error">Something went wrong...</div>}
+
                         </div>
                     </form>
                 </div>

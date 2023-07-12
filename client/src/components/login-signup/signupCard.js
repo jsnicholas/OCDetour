@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
@@ -18,7 +17,7 @@ function SignupCard() {
         }
     })
     // set initial form state
-    const [userFormData, setUserFormData] = useState({email: '', password: '' });
+    const [userFormData, setUserFormData] = useState({ email: '', password: '' });
     // // set state for form validation
     // const [validated] = useState(false);
     // // set state for alert
@@ -45,8 +44,8 @@ function SignupCard() {
             });
 
             Auth.login(data.createUser.token);
-            
-            window.location = "/activities"
+
+            window.location = "/index.html"
         } catch (err) {
             console.error(err);
             // setShowAlert(true);
