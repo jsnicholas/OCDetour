@@ -38,7 +38,7 @@ function ActivityPage() {
                             </div>
                         </div>
                     </div>}
-                    {activitiesData && <div className="p-4 grid grid-cols-1 mx-auto">
+                    {activitiesData.savedActivities.length > 0 && <div className="p-4 grid grid-cols-1 mx-auto">
                         <UserProfile />
 
                     </div>}
