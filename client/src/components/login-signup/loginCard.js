@@ -40,7 +40,7 @@ const LoginForm = () => {
             });
             Auth.login(data.login.token);
             // use navigate function here?
-            navigate('/activities');
+            navigate('/index.html');
         } catch (error) {
             console.error(error);
             // setShowAlert(true);

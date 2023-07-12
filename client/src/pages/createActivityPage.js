@@ -14,7 +14,7 @@ function CreateActivityPage() {
 
     const navigateToActivities = () => {
         // 👇️ navigate to activities list
-        navigate('/activities');
+        navigate('/index.html');
     };
 
     // useState

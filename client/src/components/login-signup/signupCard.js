@@ -46,7 +46,7 @@ function SignupCard() {
 
             Auth.login(data.createUser.token);
 
-            navigate('/activities');
+            navigate('/index.html');
         } catch (err) {
             console.error(err);
             // setShowAlert(true);
