@@ -26,6 +26,10 @@ React Library
         -[Activity Page](#activity-page)
     - [Installation & Dependencies](#installation--dependencies)
     - [Development Team](#development-team)
+        -[Tina Croxton](#tina-croxton)
+        -[Victoria McNorrill](#victoria-mcnorrill)
+        -[John Kersey](#john-kersey)
+        -[Nick Johnson](#nick-johnson)
     - [License](#license)
     - [Node Dependencies](#node-dependencies)
     - [Disclaimer](#disclaimer)
@@ -56,20 +60,28 @@ React Library
 
 ## Development Team
 
-**Tina Croxton**
+# Tina Croxton
+
 *Database Administrator, API Developer* 
+
 [GitHub Profile](https://github.com/TinaTheDev91)
 
-**Victoria McNorrill**  
+# Victoria McNorrill
+
 *UI/UX Designer, Front-End Developer*
+
 [Github Profile](https://github.com/victoriamcn)
 
-**John Kersey**  
+# John Kersey
+
 *Authentication Engineer*
+
 [Github Profile](https://github.com/JohnKersey2)
 
-**Nick Johnson**
+# Nick Johnson
+
 *UI/UX Designer, Front-End Developer*
+
 [Github Profile](https://github.com/jsnicholas)
 
 ## License
@@ -78,7 +90,7 @@ React Library
 This project is licensed under MIT.
 
 - [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation or,
-- Go to the [license file](https://github.com/jsnicholas/LaborHub/blob/main/LICENSE) with in this repository.
+- Go to the [license file]() with in this repository.
 
 ## Node Dependencies
 
