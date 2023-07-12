@@ -1,21 +1,9 @@
 import React, { useState } from 'react'
 import { useMutation } from "@apollo/client";
-import { useNavigate } from 'react-router-dom';
-
 import { SAVE_ACTIVITY } from '../utils/mutations';
 
-//mutation should be from the client/src/utils folder
-// import saveActivity from '../../../server/schemas/resolvers/saveActivity'
 
 function CreateActivityPage() {
-    // when create button is clicked
-    // page transition to activity page
-    const navigate = useNavigate();
-
-    const navigateToActivities = () => {
-        // 👇️ navigate to activities list
-        navigate('/index.html');
-    };
 
     // useState
     const [newActivity, setNewActivity] = useState({
@@ -45,7 +33,7 @@ function CreateActivityPage() {
                 variables: { ...newActivity },
             });
             if (data) {
-                navigateToActivities()
+                window.location = "./index.html"
             }
         } catch (error) {
             console.error(error);
@@ -96,7 +84,7 @@ function CreateActivityPage() {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label  mb-2">
-                                <span className="label-text font-bold">Activity Timer:</span>
+                                <span className="label-text font-bold">Activity Length (In Minutes):</span>
                             </label>
                             <input
                                 name="timeInSeconds"
@@ -113,7 +101,7 @@ function CreateActivityPage() {
                                 className="btn btn-primary mb-2"
                                 onClick={handleSaveActivity}>Create</button>
                         </div>
-                        {error && <div className="alert alert-error">Something went wrong...</div>}
+                        {error && <div className="alert alert-error">Error creating activity.</div>}
                     </form>
                 </div>
 

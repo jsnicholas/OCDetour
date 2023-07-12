@@ -74,6 +74,7 @@ const LoginForm = () => {
 
                     <h2 className="card-title">Welcome!</h2>
                     <span>Please log in.</span>
+                    {error && <div className="alert alert-error">Error logging in.</div>}
                     <form onSubmit={handleFormSubmit}>
                         {/* Email input */}
                         <input
@@ -108,7 +109,7 @@ const LoginForm = () => {
                             <button
                                 className="btn"
                                 onClick={() => window.my_modal_1.showModal()}>Sign Up</button>
-                            {error && <div className="alert alert-error">Something went wrong...</div>}
+
                         </div>
                     </form>
                 </div>
