@@ -28,19 +28,19 @@ Run client and server with `npm run develop`
 ## Development Team
 
 **Tina Croxton**
-*Database Administrator, API Developer* 
+_Database Administrator, API Developer_
 [GitHub Profile](https://github.com/TinaTheDev91)
 
 **Victoria McNorrill**  
-*UI/UX Designer, Front-End Developer*
+_UI/UX Designer, Front-End Developer_
 [Github Profile](https://github.com/victoriamcn)
 
 **John Kersey**  
-*Authentication Engineer*
+_Authentication Engineer_
 [Github Profile](https://github.com/JohnKersey2)
 
 **Nick Johnson**
-*UI/UX Designer, Front-End Developer*
+_UI/UX Designer, Front-End Developer_
 [Github Profile](https://github.com/jsnicholas)
 
 ## License
@@ -66,7 +66,7 @@ Click links to read the documentation for each dependency:
 
 ## Disclaimer
 
-OCDetour is an app designed to provide support and information for individuals dealing with obsessive-compulsive disorder (OCD). However, it is important to note that OCDetour is not intended to replace professional medical advice, diagnosis, or treatment. The content provided in this app is for informational purposes only and should not be considered a substitute for professional medical guidance.
+OCDetour is an app designed to provide support and information for individuals dealing with obsessive-compulsive disorder (OCD). However, OCDetour is not intended to replace professional medical advice, diagnosis, or treatment. The content provided in this app is for informational purposes only and should not be considered a substitute for professional medical guidance.
 
 ### Resources Used
 
