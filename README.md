@@ -55,8 +55,9 @@ React Library
 
 ## Installation & Dependencies
 
-1. Install with `npm i`.
-2. Run client and server with `npm run develop`.
+1. Install with `npm run install`.
+2. Seed the server with `cd server`, `npm run seed`, then `cd ..`
+3. Run client and server with `npm run develop`.
 
 ## Development Team
 
@@ -89,8 +90,7 @@ React Library
 [MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 This project is licensed under MIT.
 
-- [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation or,
-- Go to the [license file]() with in this repository.
+- [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation.
 
 ## Node Dependencies
 
