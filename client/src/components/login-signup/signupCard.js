@@ -5,7 +5,7 @@ import { CREATE_USER } from '../../utils/mutations';
 import Auth from "../../utils/auth"
 
 function SignupCard() {
-
+    const navigate = useNavigate();
     // create user query
     const [addUser, { error, data }] = useMutation(CREATE_USER);
     useEffect(() => {
@@ -18,7 +18,7 @@ function SignupCard() {
         }
     })
     // set initial form state
-    const [userFormData, setUserFormData] = useState({email: '', password: '' });
+    const [userFormData, setUserFormData] = useState({ email: '', password: '' });
     // // set state for form validation
     // const [validated] = useState(false);
     // // set state for alert
@@ -45,8 +45,8 @@ function SignupCard() {
             });
 
             Auth.login(data.createUser.token);
-            
-            window.location = "/activities"
+
+            navigate('/activities');
         } catch (err) {
             console.error(err);
             // setShowAlert(true);
