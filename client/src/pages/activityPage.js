@@ -29,19 +29,19 @@ function ActivityPage() {
         <>
             <section className="backdrop-blur-lg bg-white/60 transition rounded-lg ">
                 <section className="rounded-md grid grid-cols-1  m-auto">
-
-                    <div className="p-4 grid grid-cols-1 mx-auto">
-                        <UserProfile />
-                        {/* if the user has no activities, render hero block  */}
-                        {activitiesData.savedActivities.length === 0 && <div className="hero min-h-screen bg-base-200">
-                            <div className="hero-content text-center">
-                                <div className="max-w-md">
-                                    <h1 className="text-5xl font-bold">Welcome!</h1>
-                                    <p className="py-6">We're so glad you're here. Let's create an activity together! Click the edit button in the toolbar below to create your first activity.</p>
-                                </div>
+                    {/* if the user has no activities, render hero block  */}
+                    {activitiesData.savedActivities.length === 0 && <div className="hero min-h-screen bg-base-200">
+                        <div className="hero-content text-center">
+                            <div className="max-w-md">
+                                <h1 className="text-5xl font-bold">Welcome!</h1>
+                                <p className="py-6">We're so glad you're here. Let's create an activity together! Click the edit button in the toolbar below to create your first activity.</p>
                             </div>
-                        </div>}
-                    </div>
+                        </div>
+                    </div>}
+                    {activitiesData && <div className="p-4 grid grid-cols-1 mx-auto">
+                        <UserProfile />
+
+                    </div>}
                     <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content mb-10">
                         {/* if the user has activities, render them */}
                         {activitiesData && activitiesData?.savedActivities?.map((activity, i) => {
