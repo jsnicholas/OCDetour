@@ -16,7 +16,7 @@ function ActivityPage() {
     const { loading, data } = useQuery(ME);
     // console.log(`User data: ${JSON.stringify(data)}`);
     if (!data) {
-        navigate("/login")
+        window.location = "/"
     }
     // check if the user has data, if so display it
     const activitiesData = data?.me || [];
@@ -36,7 +36,7 @@ function ActivityPage() {
                     </div>
                     <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content mb-10">
                         {/* if the user has no activities, render hero block  */}
-                        {!activitiesData && <div className="hero min-h-screen bg-base-200">
+                        {activitiesData.savedActivities.length === 0 && <div className="hero min-h-screen bg-base-200">
                             <div className="hero-content text-center">
                                 <div className="max-w-md">
                                     <h1 className="text-5xl font-bold">Welcome!</h1>
