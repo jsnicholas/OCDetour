@@ -21,16 +21,16 @@ React Library
 - [Table of Contents](#table-of-contents)
     - [Links](#links)
     - [Preview](#preview)
-        -[Login Page](#login-page)
-        -[Create Activity Page](#create-activity-page)
-        -[Activity Page](#activity-page)
-        -[Site Map](#site-map)
+            -[Login Page](#login-page)
+            -[Create Activity Page](#create-activity-page)
+            -[Activity Page](#activity-page)
+            -[Site Map](#site-map)
     - [Installation & Dependencies](#installation--dependencies)
     - [Development Team](#development-team)
-        -[Tina Croxton](#tina-croxton)
-        -[Victoria McNorrill](#victoria-mcnorrill)
-        -[John Kersey](#john-kersey)
-        -[Nick Johnson](#nick-johnson)
+            -[Tina Croxton](#tina-croxton)
+            -[Victoria McNorrill](#victoria-mcnorrill)
+            -[John Kersey](#john-kersey)
+            -[Nick Johnson](#nick-johnson)
     - [License](#license)
     - [Node Dependencies](#node-dependencies)
     - [Disclaimer](#disclaimer)
@@ -48,7 +48,7 @@ React Library
 
 ## Links
 
-[Deployed Application]()
+[Deployed Application](https://ocdetour-4111fd1eff32.herokuapp.com/?)
 
 ## Preview
 
