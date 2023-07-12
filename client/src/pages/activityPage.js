@@ -32,8 +32,6 @@ function ActivityPage() {
 
                     <div className="p-4 grid grid-cols-1 mx-auto">
                         <UserProfile />
-                    </div>
-                    <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content mb-10">
                         {/* if the user has no activities, render hero block  */}
                         {activitiesData.savedActivities.length === 0 && <div className="hero min-h-screen bg-base-200">
                             <div className="hero-content text-center">
@@ -44,6 +42,8 @@ function ActivityPage() {
                                 </div>
                             </div>
                         </div>}
+                    </div>
+                    <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 text-base-content mb-10">
                         {/* if the user has activities, render them */}
                         {activitiesData && activitiesData?.savedActivities?.map((activity, i) => {
                             return (
