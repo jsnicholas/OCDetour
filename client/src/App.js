@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/loginPage';
 import ActivityPage from './pages/activityPage';
 import CreateActivityPage from './pages/createActivityPage';
+import infoPage from './pages/infoPage';
 
 // import global page elements
 //import Navbar from './components/navbar/navbar'
@@ -62,6 +63,7 @@ const App = () => {
             <Route path="/" element={<LoginPage />} page="login" />
             <Route path="/activities" element={renderWithBottomMenu(ActivityPage)} />
             <Route path="/createactivity" element={renderWithBottomMenu(CreateActivityPage)} />
+            <Route path="/info" element={renderWithBottomMenu(infoPage)} />
             <Route path="*" element={renderWithBottomMenu(ActivityPage)} />
           </Routes>
           {/* TODO: the bottom menu should be rendered conditionally; only if user is on mobile */}
