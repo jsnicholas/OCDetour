@@ -56,11 +56,11 @@ const resolvers = {
     },
 
     deleteActivity: async (parent, args, context) => {
+      console.log(`Trying to delete an activity with this ID: ${JSON.stringify(args._id)}`)
       if (context.user) {
         const activity = await User.findOneAndUpdate(
           { _id: context.user_id },
-          { $pull: { savedActivities: args } },
-          { new: true }
+          { $pull: { savedActivities: { _id: args._id } } },
         );
         return activity;
       }

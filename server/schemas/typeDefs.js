@@ -43,7 +43,7 @@ const typeDefs = gql`
     createUser(email: String!, password: String!): Auth,
     login(email: String!, password: String!): Auth,
     saveActivity(activityType: String!,activityDescription: String!, timeInSeconds: String!): [activitySchema],
-    deleteActivity(activityType: String!, timeInSeconds: Int!): [activitySchema]
+    deleteActivity(_id: ID!): [activitySchema]
     updateHistory(activityType: String!, timeSpent: Int!, dateCompleted: Date!): [historySchema]
   }
 `;

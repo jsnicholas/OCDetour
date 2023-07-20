@@ -14,7 +14,6 @@ function ActivityPage() {
     // refreshPage()
     //use query  to get all saved activities for the user
     const { loading, data } = useQuery(ME);
-    console.log(`User data: ${JSON.stringify(data)}`);
     // check if the user has data, if so display it
     const activitiesData = data?.me || [];
     if (!activitiesData) {
@@ -24,7 +23,6 @@ function ActivityPage() {
     if (loading) {
         return <h2>LOADING...</h2>;
     }
-
     return (
         <>
             <section className="backdrop-blur-lg bg-white/60 transition rounded-lg ">
@@ -47,7 +45,8 @@ function ActivityPage() {
                         {activitiesData && activitiesData?.savedActivities?.map((activity, i) => {
                             return (
                                 <ActivityCard
-                                    key={i}
+                                    key={activity._id}
+                                    activityId={activity._id}
                                     activityTitle={activity.activityType}
                                     activityTimer={activity.timeInSeconds}
                                     activityDescription={activity.activityDescription}

@@ -1,17 +1,35 @@
 import React from 'react';
 import TimerPage from "./timer";
 
-// import { useQuery } from '@apollo/client';
-// import { ACTIVITIES } from '../../utils/queries';
+//mutation imports
+import { useMutation } from "@apollo/client";
+import { DELETE_ACTIVITY } from "../../utils/mutations";
 
 // describe which parameters to expect
 // ensure that we are receiving correct data
 const ActivityCard = (props) => {
-
-  const { activityTimer, activityDescription, activityTitle } =
+  const { activityTimer, activityDescription, activityTitle, activityId } =
     props;
+  // use the DELETE_ACTIVITY mutation
+  const [deleteActivity, { error, data }] = useMutation(DELETE_ACTIVITY);
+  // When users clicks 'delete activity' button
+  const handleDeleteActivity = async () => {
+    console.log(activityId)
+    try {
+      // eslint-disable-next-line no-unused-vars
+      await deleteActivity({
+        variables: { activityId },
+      });
+      console.log(`we are trying to delete this: ${activityId}`);
+      console.log(data)
+      if (data) {
+        window.location = "./index.html"
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
-  // return <img src={require("../../assets/activities/${activityDescription}.jpg")}
 
   function description() {
     if (activityDescription) {
@@ -30,9 +48,15 @@ const ActivityCard = (props) => {
             activityTitle={activityTitle}
             activityTimer={activityTimer}
           />
-          <div className="modal-action">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn">Close</button>
+          <div className="modal-action justify-evenly">
+            <button
+              type="button"
+              className="btn btn-warning w-1/4"
+              onClick={() => handleDeleteActivity()}
+            >
+              Delete Activity
+            </button>
+            <button className="btn w-1/4">Close</button>
           </div>
         </form>
       </dialog>
@@ -45,7 +69,7 @@ const ActivityCard = (props) => {
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{activityTimer} minutes</div>
             <p className="block mt-1 text-lg leading-tight font-medium text-black">{activityTitle}</p>
-            <p className="mt-2 text-slate-500" >{activityDescription} Activity</p>
+            <p className="mt-2 text-slate-500" >{activityDescription} Activity </p>
           </div>
         </div>
       </div>
