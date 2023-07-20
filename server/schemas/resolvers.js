@@ -43,7 +43,7 @@ const resolvers = {
       return { token, user }
     },
     saveActivity: async (parent, args, context) => {
-      console.log(`User context ${JSON.stringify(context.user)}`)
+      console.log(`Save activity args are: ${JSON.stringify(args)}`)
       if (context.user) {
         const returnedUser = await User.findOneAndUpdate(
           { _id: context.user._id },

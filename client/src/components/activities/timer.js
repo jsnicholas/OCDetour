@@ -1,6 +1,10 @@
 import BreatheIcon from "../global/breatheIcon";
 import React, { useRef } from "react";
 
+//mutation imports
+import { useMutation } from "@apollo/client";
+import { DELETE_ACTIVITY } from "../../utils/mutations";
+
 // import timer libraries
 // read the documentation here: https://www.npmjs.com/package/react-countdown
 import Countdown from 'react-countdown';
@@ -14,6 +18,25 @@ function TimerPage(props) {
         // start the timer for this activity ONLY
         // this.Countdown.start();
         console.log("Starting Activity")
+    }
+
+    // use the DELETE_ACTIVITY mutation
+    const [deleteActivity, { error, data }] = useMutation(DELETE_ACTIVITY);
+    // When users clicks 'delete activity' button
+    const handleDeleteActivity = async (event) => {
+        event.preventDefault();
+        try {
+            // eslint-disable-next-line no-unused-vars
+            const { data } = await deleteActivity({
+                variables: {},
+            });
+            // console.log(data);
+            if (data) {
+                window.location = "./index.html"
+            }
+        } catch (error) {
+            console.error(error);
+        }
     }
     // do something when the count down ends
     // for now, it renders the text within the span
@@ -54,14 +77,20 @@ function TimerPage(props) {
 
                 <Completionist />
             </Countdown> <br />
-            {/* this button is not currently working. I need to look more into the docs */}
-            <button
-                className="btn btn-primary w-full"
-                onClick={handleActivityStart}
-            >
-                Start Activity
-            </button> <br />
-
+            <div className="flex space-between">
+                <button
+                    className="btn btn-warning w-1/2"
+                    onClick={handleDeleteActivity}
+                >
+                    Delete Activity
+                </button>
+                <button
+                    className="btn btn-primary w-1/2"
+                    onClick={handleActivityStart}
+                >
+                    Start Activity
+                </button>
+            </div>
         </section>
     )
 }
