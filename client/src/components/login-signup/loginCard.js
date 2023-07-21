@@ -75,7 +75,7 @@ const LoginForm = () => {
                     <h2 className="card-title">Welcome!</h2>
                     <span>Please log in.</span>
                     {error && <div className="alert alert-error">Error logging in.</div>}
-                    <form>
+                    <form onSubmit={handleFormSubmit}>
                         {/* Email input */}
                         <input
                             className="input input-bordered w-full max-w-xs my-2"

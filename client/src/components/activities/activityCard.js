@@ -15,18 +15,14 @@ const ActivityCard = (props) => {
   // When users clicks 'delete activity' button
   const handleDeleteActivity = async () => {
     console.log(activityId)
-    try {
-      // eslint-disable-next-line no-unused-vars
+    const { data } =
       await deleteActivity({
         variables: { activityId },
       });
-      console.log(`we are trying to delete this: ${activityId}`);
-      console.log(data)
-      if (data) {
-        window.location = "./index.html"
-      }
-    } catch (error) {
-      console.error(error);
+    console.log(`we are trying to delete this: ${activityId}`);
+    console.log(data)
+    if (data) {
+      window.location = "./index.html"
     }
   }
 

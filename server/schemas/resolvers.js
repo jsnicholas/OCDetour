@@ -43,6 +43,7 @@ const resolvers = {
       return { token, user }
     },
     saveActivity: async (parent, args, context) => {
+      console.log(context)
       console.log(`Save activity args are: ${JSON.stringify(args)}`)
       if (context.user) {
         const returnedUser = await User.findOneAndUpdate(
@@ -56,15 +57,20 @@ const resolvers = {
     },
 
     deleteActivity: async (parent, args, context) => {
+      console.log(context)
       console.log(`Trying to delete an activity with this ID: ${JSON.stringify(args._id)}`)
       if (context.user) {
-        const activity = await User.findOneAndUpdate(
-          { _id: context.user_id },
-          { $pull: { savedActivities: { _id: args._id } } },
-        );
-        return activity;
+        try {
+          await User.findOneAndUpdate(
+            { _id: context.user_id },
+            { $pull: { savedActivities: { _id: args._id } } },
+          ).then((response) => {
+            console.log(response)
+          });
+        } catch {
+          console.log('error deleting activity')
+        }
       }
-      throw new AuthenticationError('Please log in to perform this action',)
     },
     updateHistory: async (parent, args, context) => {
       if (context.user) {

@@ -38,9 +38,7 @@ export const SAVE_ACTIVITY = gql`
 export const DELETE_ACTIVITY = gql`
     mutation deleteActivity($activityId: ID!) {
     deleteActivity(_id:$activityId) {
-
         _id
-
     }
     }
 `;
