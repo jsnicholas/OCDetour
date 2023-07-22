@@ -5,7 +5,6 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     user: async (parent, { email }) => {
-      console.log(`this is the email: ${email}`)
       const params = email ? { email: email } : {}
       return User.find(params);
     },
@@ -37,14 +36,14 @@ const resolvers = {
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-      console.log(user)
+      // console.log(user)
       const token = signToken(user);
 
       return { token, user }
     },
     saveActivity: async (parent, args, context) => {
-      console.log(context)
-      console.log(`Save activity args are: ${JSON.stringify(args)}`)
+      // console.log(context)
+      // console.log(`Save activity args are: ${JSON.stringify(args)}`)
       if (context.user) {
         const returnedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
@@ -57,16 +56,15 @@ const resolvers = {
     },
 
     deleteActivity: async (parent, args, context) => {
-      console.log(context)
-      console.log(`Trying to delete an activity with this ID: ${JSON.stringify(args._id)}`)
+      // console.log(context)
+      // console.log(`Trying to delete an activity with this ID: ${JSON.stringify(args._id)}`)
       if (context.user) {
+        // console.log(`user context: ${context.user._id}`)
         try {
           await User.findOneAndUpdate(
-            { _id: context.user_id },
+            { _id: context.user._id },
             { $pull: { savedActivities: { _id: args._id } } },
-          ).then((response) => {
-            console.log(response)
-          });
+          );
         } catch {
           console.log('error deleting activity')
         }

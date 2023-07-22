@@ -31,9 +31,9 @@ function CreateActivityPage() {
             const { data } = await saveActivity({
                 variables: { ...newActivity },
             });
-            console.log(`New activity data incoming:${data}`)
             if (data) {
-                window.location = "./index.html"
+                // after creating an activity, go back to activity page
+                window.location = "/activities"
             }
         } catch (error) {
             console.error(error);

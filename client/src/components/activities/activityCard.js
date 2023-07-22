@@ -15,17 +15,12 @@ const ActivityCard = (props) => {
   // When users clicks 'delete activity' button
   const handleDeleteActivity = async () => {
     console.log(activityId)
-    const { data } =
-      await deleteActivity({
-        variables: { activityId },
-      });
-    console.log(`we are trying to delete this: ${activityId}`);
-    console.log(data)
-    if (data) {
-      window.location = "./index.html"
-    }
+    await deleteActivity({
+      variables: { activityId },
+    }).then(() => {
+      window.location = "/activities"
+    })
   }
-
 
   function description() {
     if (activityDescription) {

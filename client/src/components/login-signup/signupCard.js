@@ -12,7 +12,7 @@ function SignupCard() {
             console.error(error)
             // setShowAlert(true)
         } else {
-            console.log(data)
+            console.log(`error creating user`)
             // setShowAlert(false)
         }
     })
@@ -44,8 +44,8 @@ function SignupCard() {
             });
 
             Auth.login(data.createUser.token);
-
-            window.location = "/index.html"
+            // after creating a user, take them to welcome page
+            window.location = "/activities"
         } catch (err) {
             console.error(err);
             // setShowAlert(true);
