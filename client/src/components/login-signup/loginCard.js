@@ -25,7 +25,6 @@ const LoginForm = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log("Attempting to sign in...")
         // check if form has everything (as per react-bootstrap docs)
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -39,8 +38,8 @@ const LoginForm = () => {
                 variables: { ...userFormData }
             });
             Auth.login(data.login.token);
-            // use navigate function here?
-            window.location = "/index.html"
+            // if successful login, go to activities
+            window.location = "/activities"
         } catch (error) {
             console.error(error);
             // setShowAlert(true);

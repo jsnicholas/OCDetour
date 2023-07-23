@@ -1,6 +1,7 @@
 import BreatheIcon from "../global/breatheIcon";
 import React, { useRef } from "react";
 
+
 // import timer libraries
 // read the documentation here: https://www.npmjs.com/package/react-countdown
 import Countdown from 'react-countdown';
@@ -13,8 +14,9 @@ function TimerPage(props) {
         clockRef.current.start();
         // start the timer for this activity ONLY
         // this.Countdown.start();
-        console.log("Starting Activity")
     }
+
+
     // do something when the count down ends
     // for now, it renders the text within the span
     // but this could also be configured to add the completed time to user stats
@@ -54,14 +56,14 @@ function TimerPage(props) {
 
                 <Completionist />
             </Countdown> <br />
-            {/* this button is not currently working. I need to look more into the docs */}
-            <button
-                className="btn btn-primary w-full"
-                onClick={handleActivityStart}
-            >
-                Start Activity
-            </button> <br />
-
+            <div>
+                <button
+                    className="btn btn-primary"
+                    onClick={handleActivityStart}
+                >
+                    Start Activity
+                </button>
+            </div>
         </section>
     )
 }

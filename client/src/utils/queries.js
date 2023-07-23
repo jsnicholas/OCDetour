@@ -5,6 +5,7 @@ export const USER = gql`
     user(email: $email) {
         email
         savedActivities {
+        _id
             activityDescription
             activityType
             timeInSeconds
@@ -16,6 +17,7 @@ export const USER = gql`
 export const ACTIVITIES = gql`
     query activities($email: String) {
     activities(email: $email) {
+    _id
         activityType
         timeInSeconds
         activityDescription
@@ -26,6 +28,7 @@ export const ACTIVITIES = gql`
 export const HISTORY = gql`
     query history($email: String) {
     history(email: $email) {
+    _id
         activityType
         dateCompleted
         timeSpent
@@ -39,6 +42,7 @@ query me {
 me {
 _id
 savedActivities{
+_id
 activityType
 timeInSeconds
 activityDescription

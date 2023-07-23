@@ -7,6 +7,7 @@ function CreateActivityPage() {
 
     // useState
     const [newActivity, setNewActivity] = useState({
+        _id: "",
         activityType: "",
         activityDescription: "",
         timeInSeconds: "",
@@ -18,22 +19,21 @@ function CreateActivityPage() {
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        console.log(name)
-        console.log(value)
         setNewActivity({ ...newActivity, [name]: value });
     }
 
     // CREATE ACTIVITY: logic for new activity to be saved to account
     const handleSaveActivity = async (event) => {
         event.preventDefault();
-        console.log(`New activity: ${JSON.stringify(newActivity)}`)
+        // console.log(`New activity: ${JSON.stringify(newActivity)}`)
         try {
             // eslint-disable-next-line no-unused-vars
             const { data } = await saveActivity({
                 variables: { ...newActivity },
             });
             if (data) {
-                window.location = "./index.html"
+                // after creating an activity, go back to activity page
+                window.location = "/activities"
             }
         } catch (error) {
             console.error(error);
@@ -65,11 +65,12 @@ function CreateActivityPage() {
                                 <span className="label-text font-bold">Activity Description:</span>
                             </label>
                             <select
+                                defaultValue={'DEFAULT'}
                                 name="activityDescription"
                                 className="select select-primary w-full max-w-xs mb-2 font-bold"
                                 id="createdescription"
                                 onChange={handleInputChange}>
-                                <option disabled selected> </option>
+                                <option disabled value="DEFAULT">Choose a Category</option>
                                 <option>Breathing</option>
                                 <option>Creative</option>
                                 <option>Exercise</option>
