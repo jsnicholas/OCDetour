@@ -22,9 +22,18 @@ import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@ap
 // import BgDecorations from './components/global/backgroundDecorations';
 
 //set graphql route
+let gqlURI;
+if (process.env.NODE_ENV === 'production') {
+  gqlURI = "/graphql"
+} else {
+  gqlURI = "http://localhost:3001/graphql"
+}
+
 const gqlLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
-});
+  uri: gqlURI,
+}
+)
+
 
 // JWT token context
 // https://www.apollographql.com/docs/react/api/link/apollo-link-context/
