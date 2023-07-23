@@ -64,10 +64,8 @@ const App = () => {
             <Route path="/activities" element={renderWithBottomMenu(ActivityPage)} />
             <Route path="/createactivity" element={renderWithBottomMenu(CreateActivityPage)} />
             <Route path="/info" element={renderWithBottomMenu(infoPage)} />
-            {/* <Route path="" element={renderWithBottomMenu(ActivityPage)} /> */}
+            <Route path="/*" element={renderWithBottomMenu(ActivityPage)} />
           </Routes>
-          {/* TODO: the bottom menu should be rendered conditionally; only if user is on mobile */}
-          {/* <BottomMenu /> */}
         </BrowserRouter>
         {/* disabling bg decoration for now */}
         {/* <BgDecorations /> */}
