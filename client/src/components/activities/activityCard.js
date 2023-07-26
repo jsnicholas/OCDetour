@@ -42,12 +42,12 @@ const ActivityCard = (props) => {
           <div className="modal-action justify-evenly">
             <button
               type="button"
-              className="btn btn-warning w-1/4"
+              className="btn btn-warning w-2/5"
               onClick={() => handleDeleteActivity()}
             >
               Delete Activity
             </button>
-            <button className="btn w-1/4">Close</button>
+            <button className="btn w-2/5">Close</button>
           </div>
         </form>
       </dialog>

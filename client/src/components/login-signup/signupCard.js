@@ -58,7 +58,7 @@ function SignupCard() {
     };
 
     return (
-        <div className="card h-96 w-96 bg-base-100 text-neutral-content mx-auto">
+        <div className="card h-96 w-86 bg-base-100 text-neutral-content mx-auto">
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Welcome!</h2>
                 <p>Sign up below.</p>
